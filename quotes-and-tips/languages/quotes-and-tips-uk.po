@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quotes and Tips by BestWebSoft\n"
-"POT-Creation-Date: 2023-07-18 12:00+0300\n"
-"PO-Revision-Date: 2023-07-18 12:10+0300\n"
+"POT-Creation-Date: 2025-01-21 15:19+0200\n"
+"PO-Revision-Date: 2025-01-21 15:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: quotes-and-tips.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -23,50 +23,66 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: bws_menu\n"
 
-#: includes/class-qtsndtps-settings.php:22 quotes-and-tips.php:39
-#: quotes-and-tips.php:43 quotes-and-tips.php:662 quotes-and-tips.php:680
+#: includes/class-qtsndtps-settings.php:46 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:925 quotes-and-tips.php:950
 msgid "Settings"
 msgstr "Налаштування"
 
-#: includes/class-qtsndtps-settings.php:23
+#: includes/class-qtsndtps-settings.php:47
 msgid "Appearance"
 msgstr "Відображення"
 
-#: includes/class-qtsndtps-settings.php:24
+#: includes/class-qtsndtps-settings.php:48
 msgid "Misc"
 msgstr "Різне"
 
-#: includes/class-qtsndtps-settings.php:25
+#: includes/class-qtsndtps-settings.php:49
 msgid "Custom Code"
 msgstr "Користувацький код"
 
-#: includes/class-qtsndtps-settings.php:46
+#: includes/class-qtsndtps-settings.php:50
+msgid "Import / Export"
+msgstr "Імпорт / Експорт"
+
+#: includes/class-qtsndtps-settings.php:51
+msgid "License Key"
+msgstr "Ліцензійний ключ"
+
+#: includes/class-qtsndtps-settings.php:74
 msgid "None"
 msgstr "Не використовувати"
 
-#: includes/class-qtsndtps-settings.php:47
+#: includes/class-qtsndtps-settings.php:75
 msgid "Default"
 msgstr "За замовчуванням"
 
-#: includes/class-qtsndtps-settings.php:48
+#: includes/class-qtsndtps-settings.php:76
 msgid "Custom"
 msgstr "Користувацьке"
 
-#: includes/class-qtsndtps-settings.php:82
+#: includes/class-qtsndtps-settings.php:114
 msgid "Sorry, your nonce did not verify."
 msgstr "Вибачте, ваш номер не підтверджено."
 
-#: includes/class-qtsndtps-settings.php:121
+#: includes/class-qtsndtps-settings.php:120
+msgid "Error: Failed to upload the CSV file."
+msgstr "Помилка: Не вдалося завантажити файл CSV."
+
+#: includes/class-qtsndtps-settings.php:122
+msgid "Import completed."
+msgstr "Імпорт завершено."
+
+#: includes/class-qtsndtps-settings.php:174
 msgid "There is no data about the uploaded file."
 msgstr "Відсутні дані щодо завантаженого файлу."
 
-#: includes/class-qtsndtps-settings.php:123
+#: includes/class-qtsndtps-settings.php:176
 msgid "Image/video was not uploaded by HTTP POST. Possible file upload attack."
 msgstr ""
 "Зображення/відео не було завантажено через HTTP POST. Можлива атака "
 "завантаження файлів."
 
-#: includes/class-qtsndtps-settings.php:125
+#: includes/class-qtsndtps-settings.php:178
 msgid ""
 "Wrong file format. The image should be png, jpg(jpeg) or gif, the video "
 "should be mp4, m4v, webm, ogv or flv"
@@ -74,90 +90,105 @@ msgstr ""
 "Неправильний формат файлу. Зображення має бути у форматі png, jpg(jpeg) або "
 "gif, відео має бути у форматі mp4, m4v, webm, ogv або flv."
 
-#: includes/class-qtsndtps-settings.php:127
+#: includes/class-qtsndtps-settings.php:180
 msgid "The file size should not exceed"
 msgstr "Розмір файлу не повинен перевищувати"
 
-#: includes/class-qtsndtps-settings.php:135
+#: includes/class-qtsndtps-settings.php:182
+msgid "Sorry, you are not allowed to upload this file type."
+msgstr "Вибачте, вам не дозволено завантажувати цей тип файлів."
+
+#: includes/class-qtsndtps-settings.php:190
 msgid "Could not create image directory."
 msgstr "Не вдалося створити папку для зображень."
 
-#: includes/class-qtsndtps-settings.php:140
+#: includes/class-qtsndtps-settings.php:195
 #, php-format
 msgid "The uploaded file could not be moved to %s."
 msgstr "Завантажений файл не може бути переміщено до %s."
 
-#: includes/class-qtsndtps-settings.php:156
+#: includes/class-qtsndtps-settings.php:211
 msgid "Could not save background image/video file to WordPress media library."
 msgstr ""
 "Не вдалося зберегти фонове зображення/відеофайл у медіа-бібліотеці WordPress."
 
-#: includes/class-qtsndtps-settings.php:244
+#: includes/class-qtsndtps-settings.php:302
 msgid "Settings saved."
 msgstr "Налаштування збережені."
 
-#: includes/class-qtsndtps-settings.php:254 quotes-and-tips.php:39
-#: quotes-and-tips.php:43 quotes-and-tips.php:650
+#: includes/class-qtsndtps-settings.php:322 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:906
 msgid "Quotes and Tips Settings"
 msgstr "Налаштування Quotes and Tips"
 
-#: includes/class-qtsndtps-settings.php:259
+#: includes/class-qtsndtps-settings.php:327
 msgid "Random Change on"
 msgstr "Випадкові зміни на"
 
-#: includes/class-qtsndtps-settings.php:262
+#: includes/class-qtsndtps-settings.php:330
 msgid "Page reload"
 msgstr "Перезавантаження сторінки"
 
-#: includes/class-qtsndtps-settings.php:263
+#: includes/class-qtsndtps-settings.php:331
 msgid "Once a day"
 msgstr "Раз на день"
 
-#: includes/class-qtsndtps-settings.php:263
+#: includes/class-qtsndtps-settings.php:332
 msgid "AJAX (no page reload)"
 msgstr "AJAX (без перезавантаження сторінки)"
 
-#: includes/class-qtsndtps-settings.php:268
+#: includes/class-qtsndtps-settings.php:336
+#: includes/class-qtsndtps-settings.php:591
+#: includes/class-qtsndtps-settings.php:638
+#: includes/class-qtsndtps-settings.php:680
+msgid "Close"
+msgstr "Закрити"
+
+#: includes/class-qtsndtps-settings.php:338
+msgid "Button for changing quotes"
+msgstr "Кнопка для зміни лапок"
+
+#: includes/class-qtsndtps-settings.php:349
 msgid "Change Frequency"
 msgstr "Частота зміни"
 
-#: includes/class-qtsndtps-settings.php:270
+#: includes/class-qtsndtps-settings.php:351
 msgid "sec"
 msgstr "сек"
 
-#: includes/class-qtsndtps-settings.php:274
+#: includes/class-qtsndtps-settings.php:355
 msgid "Title Options"
 msgstr "Налаштування назв блоків"
 
-#: includes/class-qtsndtps-settings.php:277
+#: includes/class-qtsndtps-settings.php:358
 msgid "Set Title From Post"
 msgstr "Використовувати назву з назви цитати або підказки"
 
-#: includes/class-qtsndtps-settings.php:278
+#: includes/class-qtsndtps-settings.php:359
 msgid "Set Custom Titles"
 msgstr "Використовувати користувацькі назви"
 
-#: includes/class-qtsndtps-settings.php:283
+#: includes/class-qtsndtps-settings.php:364
 msgid "Tip Title"
 msgstr "Назва блоку підказки"
 
-#: includes/class-qtsndtps-settings.php:289
+#: includes/class-qtsndtps-settings.php:370
 msgid "Quote Title"
 msgstr "Назва блоку цитати"
 
-#: includes/class-qtsndtps-settings.php:295
+#: includes/class-qtsndtps-settings.php:376
 msgid "Add Quotes and Tips to the Search"
 msgstr "Додати Quotes and Tips до пошуку"
 
-#: includes/class-qtsndtps-settings.php:305
+#: includes/class-qtsndtps-settings.php:386
 #, php-format
 msgid "Go to %s Settings to include quotes and tips to your website search"
 msgstr ""
 "Перейдіть до налаштувань %s, щоб додати цитати та поради до пошуку на веб-"
 "сайті"
 
-#: includes/class-qtsndtps-settings.php:312
-#: includes/class-qtsndtps-settings.php:318
+#: includes/class-qtsndtps-settings.php:393
+#: includes/class-qtsndtps-settings.php:399
 msgid ""
 "Enable to include quotes and tips to your website search. Custom Search "
 "plugin is required."
@@ -165,20 +196,20 @@ msgstr ""
 "Включити цитати та підказки до пошуку на вашому сайті. Потрібен плагін "
 "Custom Search."
 
-#: includes/class-qtsndtps-settings.php:312
+#: includes/class-qtsndtps-settings.php:393
 msgid "Activate Now"
 msgstr "Активувати зараз"
 
-#: includes/class-qtsndtps-settings.php:318
-#: includes/class-qtsndtps-settings.php:345
+#: includes/class-qtsndtps-settings.php:399
+#: includes/class-qtsndtps-settings.php:426
 msgid "Install Now"
 msgstr "Встановити зараз"
 
-#: includes/class-qtsndtps-settings.php:323
+#: includes/class-qtsndtps-settings.php:404
 msgid "Automatic Mailout when Publishing a New:"
 msgstr "Автоматична розсилка при публікації нового:"
 
-#: includes/class-qtsndtps-settings.php:332
+#: includes/class-qtsndtps-settings.php:413
 #, php-format
 msgid ""
 "Go to %s Settings to include quotes and tips to automatic mailout when "
@@ -187,8 +218,8 @@ msgstr ""
 "Перейдіть до налаштувань %s, щоб включити цитати та поради до автоматичної "
 "розсилки під час публікації нових цитат та порад"
 
-#: includes/class-qtsndtps-settings.php:339
-#: includes/class-qtsndtps-settings.php:345
+#: includes/class-qtsndtps-settings.php:420
+#: includes/class-qtsndtps-settings.php:426
 msgid ""
 "Enable to automatic mailout when publishing a new quotes and tips. Sender "
 "Pro plugin is required."
@@ -196,43 +227,51 @@ msgstr ""
 "Увімкніть автоматичну розсилку під час публікації нових цитат та підказок. "
 "Потрібен плагін Sender Pro."
 
-#: includes/class-qtsndtps-settings.php:339
+#: includes/class-qtsndtps-settings.php:420
 msgid "Ativate Now"
 msgstr "Активувати зараз"
 
-#: includes/class-qtsndtps-settings.php:350
+#: includes/class-qtsndtps-settings.php:431
 msgid "Remove Quatation Marks"
 msgstr "Видалити лапки"
 
-#: includes/class-qtsndtps-settings.php:355
+#: includes/class-qtsndtps-settings.php:436
 msgid "Enable to remove quatation marks."
 msgstr "Увімкніть для видалення лапок."
 
-#: includes/class-qtsndtps-settings.php:368
+#: includes/class-qtsndtps-settings.php:454
 msgid "Appearance Settings"
 msgstr "Налаштування відображення"
 
-#: includes/class-qtsndtps-settings.php:373
+#: includes/class-qtsndtps-settings.php:459
 msgid "Custom Styles"
 msgstr "Нестандартні стилі"
 
-#: includes/class-qtsndtps-settings.php:377
+#: includes/class-qtsndtps-settings.php:463
 msgid "Enable to apply custom styles."
 msgstr "Дозволити застосовувати власні стилі."
 
-#: includes/class-qtsndtps-settings.php:384
+#: includes/class-qtsndtps-settings.php:470
 msgid "Background Color"
 msgstr "Колір фону"
 
-#: includes/class-qtsndtps-settings.php:390
+#: includes/class-qtsndtps-settings.php:476
 msgid "Text Color"
 msgstr "Колір тексту"
 
-#: includes/class-qtsndtps-settings.php:396
+#: includes/class-qtsndtps-settings.php:482
+msgid "Title Text Size"
+msgstr "Розмір тексту заголовка"
+
+#: includes/class-qtsndtps-settings.php:489
+msgid "Text Size"
+msgstr "Розмір тексту"
+
+#: includes/class-qtsndtps-settings.php:496
 msgid "Background Image/Video"
 msgstr "Фонове зображення/відео"
 
-#: includes/class-qtsndtps-settings.php:415
+#: includes/class-qtsndtps-settings.php:515
 msgid ""
 "The image should be png, jpg(jpeg) or gif, the video should be mp4, m4v, "
 "webm, ogv or flv. The file size should not exceed"
@@ -240,43 +279,127 @@ msgstr ""
 "Зображення має бути у форматі png, jpg(jpeg) або gif, відео має бути у "
 "форматі mp4, m4v, webm, ogv або flv. Розмір файлу не повинен перевищувати"
 
-#: includes/class-qtsndtps-settings.php:417
+#: includes/class-qtsndtps-settings.php:517
 msgid "Current Background"
 msgstr "Поточний фон"
 
-#: includes/class-qtsndtps-settings.php:437
+#: includes/class-qtsndtps-settings.php:537
 msgid "Your browser does not support the video tag"
 msgstr "Ваш браузер не підтримує тег video"
 
-#: includes/class-qtsndtps-settings.php:452
+#: includes/class-qtsndtps-settings.php:552
 msgid "Background Image Opacity"
 msgstr "Непрозорість фонового зображення"
 
-#: includes/class-qtsndtps-settings.php:463
+#: includes/class-qtsndtps-settings.php:559
 msgid "Background Image Repeat"
 msgstr "Повтор фонового зображення"
 
-#: includes/class-qtsndtps-settings.php:466
+#: includes/class-qtsndtps-settings.php:562
 msgid "Horizontal Repeat (x)"
 msgstr "По горизонталі (х)"
 
-#: includes/class-qtsndtps-settings.php:467
+#: includes/class-qtsndtps-settings.php:563
 msgid "Vertical Repeat (y)"
 msgstr "По вертикалі (у)"
 
-#: includes/class-qtsndtps-settings.php:468
+#: includes/class-qtsndtps-settings.php:564
 msgid "Cover"
 msgstr "Обкладинка"
 
-#: includes/class-qtsndtps-settings.php:473
+#: includes/class-qtsndtps-settings.php:569
 msgid "Background Image Alignment"
 msgstr "Вирівнювання фонового зображення"
 
-#: includes/class-qtsndtps-settings.php:506
+#: includes/class-qtsndtps-settings.php:595
+msgid "Author position"
+msgstr "Авторська позиція"
+
+#: includes/class-qtsndtps-settings.php:598
+msgid "Left"
+msgstr "Ліворуч"
+
+#: includes/class-qtsndtps-settings.php:599
+msgid "Right"
+msgstr "Праворуч"
+
+#: includes/class-qtsndtps-settings.php:612
+msgid "Border Radius"
+msgstr "Радіус рамки"
+
+#: includes/class-qtsndtps-settings.php:619
+msgid "Box Shadow Size"
+msgstr "Розмір тіні коробки"
+
+#: includes/class-qtsndtps-settings.php:622
+msgid "Offset x"
+msgstr "Зсув x"
+
+#: includes/class-qtsndtps-settings.php:623
+msgid "Offset y"
+msgstr "Зсув y"
+
+#: includes/class-qtsndtps-settings.php:624
+msgid "Blur radius"
+msgstr "Радіус розмиття"
+
+#: includes/class-qtsndtps-settings.php:629
+msgid "Box Shadow Color"
+msgstr "Колір тіні коробки"
+
+#: includes/class-qtsndtps-settings.php:642
+msgid "Block Size"
+msgstr "Розмір блоку"
+
+#: includes/class-qtsndtps-settings.php:645
+msgid "Width"
+msgstr "Ширина"
+
+#: includes/class-qtsndtps-settings.php:646
+msgid "Pay attention! In some themes this option may not work."
+msgstr "Зверніть увагу! У деяких темах ця опція може не працювати."
+
+#: includes/class-qtsndtps-settings.php:647
+msgid "Height"
+msgstr "Висота"
+
+#: includes/class-qtsndtps-settings.php:660
+msgid "Button Text"
+msgstr "Текст кнопки"
+
+#: includes/class-qtsndtps-settings.php:663
+msgid "If the ability to change quotes is enabled using the button."
+msgstr "Якщо можливість зміни котирувань увімкнена за допомогою кнопки."
+
+#: includes/class-qtsndtps-settings.php:684
+msgid "Export to CSV"
+msgstr "Експорт у файл CSV"
+
+#: includes/class-qtsndtps-settings.php:686
+msgid "Export Now"
+msgstr "Експортувати зараз"
+
+#: includes/class-qtsndtps-settings.php:687
+msgid ""
+"Please fill in all fields in quote to make the export/import function work "
+"correctly."
+msgstr ""
+"Будь ласка, заповніть всі поля в пропозиції, щоб функція експорту/імпорту "
+"працювала коректно."
+
+#: includes/class-qtsndtps-settings.php:691
+msgid "Import to CSV"
+msgstr "Імпорт у CSV"
+
+#: includes/class-qtsndtps-settings.php:694
+msgid "Import Now"
+msgstr "Імпортувати зараз"
+
+#: includes/class-qtsndtps-settings.php:714
 msgid "Quotes and Tips"
 msgstr "Quotes and Tips"
 
-#: includes/class-qtsndtps-settings.php:509
+#: includes/class-qtsndtps-settings.php:717
 msgid ""
 "Add Quotes and Tips block to your page or post by using the following "
 "shortcode:"
@@ -284,283 +407,299 @@ msgstr ""
 "Додайте блок Quotes and Tips в ваші записи, сторінки, використовуючи "
 "наступний шорткод:"
 
-#: includes/class-qtsndtps-settings.php:511
+#: includes/class-qtsndtps-settings.php:719
 msgid "Or add the following strings into the template source code"
 msgstr "Або використайте цей рядок  у файлі темплейту у вашій темі"
 
-#: quotes-and-tips.php:175 quotes-and-tips.php:270 quotes-and-tips.php:271
+#: quotes-and-tips.php:62 quotes-and-tips.php:69
+msgid "Upgrade to Pro"
+msgstr "Оновитися на Pro"
+
+#: quotes-and-tips.php:218 quotes-and-tips.php:338 quotes-and-tips.php:339
 msgid "Tips"
 msgstr "Підказки"
 
-#: quotes-and-tips.php:176
+#: quotes-and-tips.php:219
 msgid "The quotes from our clients"
 msgstr "Цитати наших клієнтів"
 
-#: quotes-and-tips.php:244 quotes-and-tips.php:1324
+#: quotes-and-tips.php:233
+msgid "Next"
+msgstr "Далі"
+
+#: quotes-and-tips.php:312 quotes-and-tips.php:1658
 msgid "Tips Categories"
 msgstr "Категорії порад"
 
-#: quotes-and-tips.php:245
+#: quotes-and-tips.php:313
 msgid "Tips Category"
 msgstr "Категорія «Поради»."
 
-#: quotes-and-tips.php:246
+#: quotes-and-tips.php:314
 msgid "Add Tips Category"
 msgstr "Додати категорію порад"
 
-#: quotes-and-tips.php:247
+#: quotes-and-tips.php:315
 msgid "Add New Tips Category"
 msgstr "Додати нову категорію підказок"
 
-#: quotes-and-tips.php:248 quotes-and-tips.php:249
+#: quotes-and-tips.php:316 quotes-and-tips.php:317
 msgid "Edit Tips Category"
 msgstr "Редагувати категорію порад"
 
-#: quotes-and-tips.php:250
+#: quotes-and-tips.php:318
 msgid "New Tips Category"
 msgstr "Нова категорія порад"
 
-#: quotes-and-tips.php:251 quotes-and-tips.php:252
+#: quotes-and-tips.php:319 quotes-and-tips.php:320
 msgid "View Tips Category"
 msgstr "Переглянути категорію «Поради»."
 
-#: quotes-and-tips.php:253
+#: quotes-and-tips.php:321
 msgid "Find Tips Category"
 msgstr "Знайдіть категорію «Поради»."
 
-#: quotes-and-tips.php:254
+#: quotes-and-tips.php:322
 msgid "No Tips Categories found"
 msgstr "Категорії порад не знайдено"
 
-#: quotes-and-tips.php:255
+#: quotes-and-tips.php:323
 msgid "No Tips Categories found in Trash"
 msgstr "У корзині не знайдено категорій порад"
 
-#: quotes-and-tips.php:256
+#: quotes-and-tips.php:324
 msgid "Parent Tips Category"
 msgstr "Батьківська  категорія «Порад»."
 
-#: quotes-and-tips.php:257
+#: quotes-and-tips.php:325
 msgid "Tips Categories list navigation"
 msgstr "Навігація списку підказок"
 
-#: quotes-and-tips.php:258
+#: quotes-and-tips.php:326
 msgid "Tips Categories list"
 msgstr "Саисок категорії цитат"
 
-#: quotes-and-tips.php:281
+#: quotes-and-tips.php:349
 msgid "Add a New Tip"
 msgstr "Додати нову підказку"
 
-#: quotes-and-tips.php:282
+#: quotes-and-tips.php:350
 msgid "Edit Tip"
 msgstr "Редагувати підказку"
 
-#: quotes-and-tips.php:283
+#: quotes-and-tips.php:351
 msgid "New Tip"
 msgstr "Нова підказка"
 
-#: quotes-and-tips.php:284
+#: quotes-and-tips.php:352
 msgid "View Tip"
 msgstr "Переглянути підказку"
 
-#: quotes-and-tips.php:285
+#: quotes-and-tips.php:353
 msgid "Search Tip"
 msgstr "Пошук підказки"
 
-#: quotes-and-tips.php:286
+#: quotes-and-tips.php:354
 msgid "No tips found"
 msgstr "Жодної підказки не знайдено"
 
-#: quotes-and-tips.php:287
+#: quotes-and-tips.php:355
 msgid "No tips found in Trash"
 msgstr "Жодної підказки у корзині не знайдено"
 
-#: quotes-and-tips.php:288
+#: quotes-and-tips.php:356
 msgid "Filter tips list"
 msgstr "Фільтр списку підказок"
 
-#: quotes-and-tips.php:289
+#: quotes-and-tips.php:357
 msgid "Tips list navigation"
 msgstr "Навігація списку підказок"
 
-#: quotes-and-tips.php:290
+#: quotes-and-tips.php:358
 msgid "Tips list"
 msgstr "Список підказок"
 
-#: quotes-and-tips.php:306 quotes-and-tips.php:1310
+#: quotes-and-tips.php:377 quotes-and-tips.php:1638
 msgid "Quotes Categories"
 msgstr "Категорії цитат"
 
-#: quotes-and-tips.php:307
+#: quotes-and-tips.php:378
 msgid "Quotes Category"
 msgstr "Категорія цитат"
 
-#: quotes-and-tips.php:308
+#: quotes-and-tips.php:379
 msgid "Add Quotes Category"
 msgstr "Додати категорію цитат"
 
-#: quotes-and-tips.php:309
+#: quotes-and-tips.php:380
 msgid "Add New Quotes Category"
 msgstr "Додати нову категорію цитат"
 
-#: quotes-and-tips.php:310 quotes-and-tips.php:311
+#: quotes-and-tips.php:381 quotes-and-tips.php:382
 msgid "Edit Quotes Category"
 msgstr "Редагувати категорію цитат"
 
-#: quotes-and-tips.php:312
+#: quotes-and-tips.php:383
 msgid "New Quotes Category"
 msgstr "Нова категорія цитат"
 
-#: quotes-and-tips.php:313 quotes-and-tips.php:314
+#: quotes-and-tips.php:384 quotes-and-tips.php:385
 msgid "View Quotes Category"
 msgstr "Переглянути категорію цитат"
 
-#: quotes-and-tips.php:315
+#: quotes-and-tips.php:386
 msgid "Find Quotes Category"
 msgstr "Знайти категорію Цитати"
 
-#: quotes-and-tips.php:316
+#: quotes-and-tips.php:387
 msgid "No Quotes Categories found"
 msgstr "Категорії цитат не знайдено"
 
-#: quotes-and-tips.php:317
+#: quotes-and-tips.php:388
 msgid "No Quotes Categories found in Trash"
 msgstr "У корзині не знайдено категорій цитат"
 
-#: quotes-and-tips.php:318
+#: quotes-and-tips.php:389
 msgid "Parent Quotes Category"
 msgstr "Батьківська категорія цитат"
 
-#: quotes-and-tips.php:319
+#: quotes-and-tips.php:390
 msgid "Quotes Categories list navigation"
 msgstr "Навігація списку цитат"
 
-#: quotes-and-tips.php:320
+#: quotes-and-tips.php:391
 msgid "Quotes Categories list"
 msgstr "Список категорій цитат"
 
-#: quotes-and-tips.php:333 quotes-and-tips.php:334
+#: quotes-and-tips.php:404 quotes-and-tips.php:405
 msgid "Quotes"
 msgstr "Цитати"
 
-#: quotes-and-tips.php:344
+#: quotes-and-tips.php:415
 msgid "Add a New Quote"
 msgstr "Додати нову цитату"
 
-#: quotes-and-tips.php:345
+#: quotes-and-tips.php:416
 msgid "Edit Quote"
 msgstr "Редагувати цитату"
 
-#: quotes-and-tips.php:346
+#: quotes-and-tips.php:417
 msgid "New Quote"
 msgstr "Нова цитата"
 
-#: quotes-and-tips.php:347
+#: quotes-and-tips.php:418
 msgid "View Quote"
 msgstr "Переглянути цитату"
 
-#: quotes-and-tips.php:348
+#: quotes-and-tips.php:419
 msgid "Search Quote"
 msgstr "Пошук цитати"
 
-#: quotes-and-tips.php:349
+#: quotes-and-tips.php:420
 msgid "No quote found"
 msgstr "Жодної цитати не знайдено"
 
-#: quotes-and-tips.php:350
+#: quotes-and-tips.php:421
 msgid "No quote found in Trash"
 msgstr "Жодної цитати у корзині не знайдено"
 
-#: quotes-and-tips.php:351
+#: quotes-and-tips.php:422
 msgid "Filter quotes list"
 msgstr "Фільтр списку цитат"
 
-#: quotes-and-tips.php:352
+#: quotes-and-tips.php:423
 msgid "Quotes list navigation"
 msgstr "Навігація списку цитат"
 
-#: quotes-and-tips.php:353
+#: quotes-and-tips.php:424
 msgid "Quotes list"
 msgstr "Список цитат"
 
-#: quotes-and-tips.php:611
+#: quotes-and-tips.php:869
 msgid "Name:"
 msgstr "Ім’я:"
 
-#: quotes-and-tips.php:619
+#: quotes-and-tips.php:873
 msgid "Official Position:"
 msgstr "Офіційна посада:"
 
-#: quotes-and-tips.php:633
+#: quotes-and-tips.php:877
+msgid ""
+"Please fill in these fields to make the export/import function work "
+"correctly."
+msgstr ""
+"Будь ласка, заповніть ці поля, щоб функція експорту/імпорту працювала "
+"коректно."
+
+#: quotes-and-tips.php:887
 msgid "Name and Official Position"
 msgstr "Ім’я та офіційна посада"
 
-#: quotes-and-tips.php:664
+#: quotes-and-tips.php:927
 msgid "FAQ"
 msgstr "FAQ"
 
-#: quotes-and-tips.php:665
+#: quotes-and-tips.php:928
 msgid "Support"
 msgstr "Підтримка"
 
-#: quotes-and-tips.php:998
+#: quotes-and-tips.php:1304
 msgid "MB"
 msgstr "MB"
 
-#: quotes-and-tips.php:1002
+#: quotes-and-tips.php:1308
 msgid "KB"
 msgstr "KB"
 
-#: quotes-and-tips.php:1005
+#: quotes-and-tips.php:1311
 msgid "Bytes"
 msgstr "Байт"
 
-#: quotes-and-tips.php:1031
+#: quotes-and-tips.php:1341
 msgid "Add Quotes and Tips block to your page or post"
 msgstr "Додати блок Quotes and Tips на вашу сторінку або пост"
 
-#: quotes-and-tips.php:1035
+#: quotes-and-tips.php:1345
 msgid "Quotes and Tips Block"
 msgstr "Блок цитат і порад"
 
-#: quotes-and-tips.php:1043
+#: quotes-and-tips.php:1353
 msgid "Display quotes"
 msgstr "Відобразити цитати"
 
-#: quotes-and-tips.php:1047 quotes-and-tips.php:1066
+#: quotes-and-tips.php:1357 quotes-and-tips.php:1376
 msgid "All categories"
 msgstr "Всі категорії"
 
-#: quotes-and-tips.php:1061
+#: quotes-and-tips.php:1371
 msgid "Display tips"
 msgstr "Відобразити підказки"
 
-#: quotes-and-tips.php:1081
+#: quotes-and-tips.php:1391
 msgid "Display Quote"
 msgstr "Відобразити цитату"
 
-#: quotes-and-tips.php:1095 quotes-and-tips.php:1124
+#: quotes-and-tips.php:1405 quotes-and-tips.php:1434
 msgid "no title"
 msgstr "без назви"
 
-#: quotes-and-tips.php:1110
+#: quotes-and-tips.php:1420
 msgid "Display Tip"
 msgstr "Відобразити підказки"
 
-#: quotes-and-tips.php:1308 quotes-and-tips.php:1322
+#: quotes-and-tips.php:1636 quotes-and-tips.php:1656
 msgid "Title"
 msgstr "Назва"
 
-#: quotes-and-tips.php:1309 quotes-and-tips.php:1323 quotes-and-tips.php:1374
+#: quotes-and-tips.php:1637 quotes-and-tips.php:1657 quotes-and-tips.php:1716
 msgid "Shortcode"
 msgstr "Шорткод"
 
-#: quotes-and-tips.php:1311 quotes-and-tips.php:1325
+#: quotes-and-tips.php:1639 quotes-and-tips.php:1659
 msgid "Author"
 msgstr "Автор"
 
-#: quotes-and-tips.php:1312 quotes-and-tips.php:1326
+#: quotes-and-tips.php:1640 quotes-and-tips.php:1660
 msgid "Date"
 msgstr "Дата"
 
@@ -624,11 +763,6 @@ msgstr "https://bestwebsoft.com/"
 #~| msgid "Add a New Tip"
 #~ msgid "Add New"
 #~ msgstr "Додати нову підказку"
-
-#, fuzzy
-#~| msgid "Activate Now"
-#~ msgid "Start Now"
-#~ msgstr "Активувати зараз"
 
 #, fuzzy
 #~| msgid "Notice:"
@@ -848,14 +982,8 @@ msgstr "https://bestwebsoft.com/"
 #~ "Для сортування блока Quotes and Tips за категоріями, додайте на свою "
 #~ "сторiнку або публiкацiю наступний шорткод. Де cat_id - номер категорії."
 
-#~ msgid "Left"
-#~ msgstr "Ліворуч"
-
 #~ msgid "Center"
 #~ msgstr "По центру"
-
-#~ msgid "Right"
-#~ msgstr "Праворуч"
 
 #~ msgid "Top"
 #~ msgstr "Зверху"

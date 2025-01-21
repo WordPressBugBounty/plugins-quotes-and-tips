@@ -6,7 +6,7 @@ Description: Add customizable quotes and tips blocks to WordPress posts, pages a
 Author: BestWebSoft
 Text Domain: quotes-and-tips
 Domain Path: /languages
-Version: 1.45
+Version: 1.46
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
@@ -39,7 +39,7 @@ if ( ! function_exists( 'add_qtsndtps_admin_menu' ) ) {
 	 * Function are using to add on admin-panel WordPress page 'bws_panel' and sub-page of this plugin
 	 */
 	function add_qtsndtps_admin_menu() {
-		global $submenu;
+		global $submenu, $wp_version, $qtsndtps_plugin_info;
 
 		if ( isset( $submenu['edit.php?post_type=quote'] ) ) {
 			$settings = add_submenu_page( 'edit.php?post_type=quote', __( 'Quotes and Tips Settings', 'quotes-and-tips' ), __( 'Settings', 'quotes-and-tips' ), 'manage_options', 'quotes-and-tips.php', 'qtsndtps_settings_page' );
@@ -56,6 +56,21 @@ if ( ! function_exists( 'add_qtsndtps_admin_menu' ) ) {
 		add_action( 'load-post.php', 'qtsndtps_add_tabs' );
 		add_action( 'load-edit.php', 'qtsndtps_add_tabs' );
 		add_action( 'load-post-new.php', 'qtsndtps_add_tabs' );
+
+		if ( isset( $submenu['edit.php?post_type=quote'] ) ) {
+			$submenu['edit.php?post_type=quote'][] = array(
+				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'quotes-and-tips' ) . '</span>',
+				'manage_options',
+				'https://bestwebsoft.com/products/wordpress/plugins/quotes-and-tips/?k=325922465d28e1eda911d9eb5add34e9&pn=82&v=' . $qtsndtps_plugin_info['Version'] . '&wp_v=' . $wp_version,
+			);
+		}
+		if ( isset( $submenu['edit.php?post_type=tips'] ) ) {
+			$submenu['edit.php?post_type=tips'][] = array(
+				'<span style="color:#d86463"> ' . __( 'Upgrade to Pro', 'quotes-and-tips' ) . '</span>',
+				'manage_options',
+				'https://bestwebsoft.com/products/wordpress/plugins/quotes-and-tips/?k=325922465d28e1eda911d9eb5add34e9&pn=82&v=' . $qtsndtps_plugin_info['Version'] . '&wp_v=' . $wp_version,
+			);
+		}
 	}
 }
 
@@ -139,13 +154,21 @@ if ( ! function_exists( 'qtsndtps_plugin_admin_init' ) ) {
 	 * Admin init
 	 */
 	function qtsndtps_plugin_admin_init() {
-		global $bws_plugin_info, $qtsndtps_plugin_info, $bws_shortcode_list;
+		global $bws_plugin_info, $qtsndtps_plugin_info, $bws_shortcode_list, $pagenow, $qtsndtps_options;
 
 		if ( empty( $bws_plugin_info ) ) {
 			$bws_plugin_info = array(
 				'id'      => '82',
 				'version' => $qtsndtps_plugin_info['Version'],
 			);
+		}
+
+		if ( 'plugins.php' == $pagenow ) {
+			/* Install the option defaults */
+			if ( function_exists( 'bws_plugin_banner_go_pro' ) ) {
+				register_qtsndtps_settings();
+				bws_plugin_banner_go_pro( $qtsndtps_options, $qtsndtps_plugin_info, 'qtsndtps', 'quotes-and-tips', '41ad5cddb9bb75a1561c5cbb9a83bbed', '82', 'quotes-and-tips' );
+			}
 		}
 
 		qtsndtps_add_custom_metabox();
@@ -438,6 +461,10 @@ if ( ! function_exists( 'qtsndtps_create_tip_quote_block' ) ) {
 			$atts
 		);
 
+		if ( '3' === $qtsndtps_options['page_load'] ) {
+			$qtsndtps_options['page_load'] = '1';
+		}
+
 		$atts['type']   = explode( '_and_', $atts['type'] );
 		$display_quotes = in_array( 'quotes', $atts['type'] );
 		$display_tips   = in_array( 'tips', $atts['type'] );
@@ -542,12 +569,6 @@ if ( ! function_exists( 'qtsndtps_create_tip_quote_block' ) ) {
 			} else {
 				$html .= $html_quotes . $html_tips . '<div class="clear">';
 			}
-			if ( '3' === $qtsndtps_options['page_load'] ) {
-				$html .= '<div class="quote_button_container"> 
-					<button class="change_quote_button">' . $button_text . '</button>
-				 </div>';
-
-			}
 			$html .= '</div>';
 		} elseif ( $display_quotes ) {
 			/* Display Quotes only */
@@ -610,7 +631,7 @@ if ( ! function_exists( 'qtsndtps_csv_download' ) ) {
 			$tips_results   = $wpdb->get_results( $tips_query, ARRAY_A );
 
 			/* Initialize CSV data */
-			$csv_data = '"post_type";"post_title";"post_content";"name_field";"off_cap"' . PHP_EOL;
+			$csv_data = '"post_type";"post_title";"post_content";"name_field";"off_cap";' . PHP_EOL;
 
 			/* Add data for quotes */
 			foreach ( $quotes_results as $quote ) {
@@ -645,7 +666,7 @@ if ( ! function_exists( 'qtsndtps_csv_download' ) ) {
 
 if ( ! function_exists( 'qtsndtps_csv_upload' ) ) {
 	/**
-	 * Upload SCV with tips and quotes
+	 * Upload CSV with tips and quotes
 	 */
 	function qtsndtps_csv_upload() {
 		global $wpdb;
@@ -658,11 +679,19 @@ if ( ! function_exists( 'qtsndtps_csv_upload' ) ) {
 
 				/* Split CSV data into rows */
 				$rows     = explode( PHP_EOL, $csv_data );
+				$current_row = '';
 				foreach ( $rows as $row ) {
+					if ( ';' !== substr( $row, -1 ) ) {
+						$current_row .= $row;
+						continue;
+					} else {
+						$row = $current_row . $row;
+					}
+					$current_row = '';
 					$row_data = str_getcsv( $row, ';' );
 					if ( empty( $row_data[0] ) || 'post_type' === $row_data[0] ) {
 						continue;
-					}
+					}				
 
 					$post_type    = sanitize_text_field( $row_data[0] );
 					$post_title   = sanitize_text_field( $row_data[1] );
@@ -845,6 +874,7 @@ if ( ! function_exists( 'qtsndtps_quote_custom_metabox' ) ) {
 				<input type="text" id="off_cap" size="37" name="off_cap" value="<?php echo ! empty( $off_cap ) ? esc_html( $off_cap[0] ) : ''; ?>" />
 			</label>
 		</p>
+		<p><span class="bws_info"><?php echo esc_html__( 'Please fill in these fields to make the export/import function work correctly.', 'quotes-and-tips' ); ?></span></p>
 		<?php
 	}
 }
@@ -985,8 +1015,6 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 		$box_shadow_color    = $qtsndtps_options['box_shadow_color'];
 		$text_size           = $qtsndtps_options['text_size'];
 		$title_text_size     = $qtsndtps_options['title_text_size'];
-		$block_width         = $qtsndtps_options['block_width'];
-		$block_height        = $qtsndtps_options['block_height'];
 
 		if ( '0' === $additional_options ) {
 			/* If additional settings is turned off */
@@ -1041,7 +1069,7 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 					border-radius: <?php echo esc_attr( $border_radius . 'px' ); ?>;
 				}
 				.quotes_box_and_tips .signature {
-					float: <?php echo ( '1' === $qtsndtps_options['author_position'] ) ? 'right' : 'left'; ?>;
+					float: left;
 				}
 				.quotes_box_and_tips:after {
 					content: '';
@@ -1074,8 +1102,6 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 						padding: 0;
 					<?php } ?>
 					font-size: <?php echo esc_attr( $text_size . 'px' ); ?>;
-					width: <?php echo esc_attr( $block_width ); ?>%;
-					height: <?php echo esc_attr( $block_height ); ?>px;
 					box-shadow: <?php echo esc_attr( $box_shadow_x ) . 'px ' . esc_attr( $box_shadow_y ) . 'px ' . esc_attr( $box_shadow_blur ) . 'px ' . esc_attr( $box_shadow_color ); ?>;
 					border-radius: <?php echo esc_attr( $border_radius . 'px' ); ?>;
 				}
@@ -1152,9 +1178,6 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 				border-radius: <?php echo esc_attr( $border_radius / 2 . 'px' ); ?>;
 				font-size: <?php echo esc_attr( $text_size . 'px' ); ?>;
 			}
-			.quotes_box_and_tips .box_delimeter {
-				height: <?php echo esc_attr( $block_height - 30 ); ?>px;
-			}
 
 			.quotes_box_and_tips h3,
 			.quotes_box_and_tips .signature,
@@ -1196,34 +1219,6 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 							});
 						}
 					})(jQuery);";
-			wp_register_script( 'qtsndtps-script-update', '', array( 'jquery' ), $qtsndtps_plugin_info['Version'], true );
-			wp_enqueue_script( 'qtsndtps-script-update' );
-			wp_add_inline_script( 'qtsndtps-script-update', sprintf( $script ) );
-		}
-		if ( '3' === $page_load ) {
-			$script = '( function($){
-						$(document).ready( function() {
-							$( "body" ).on( "click", ".change_quote_button", function() {
-								var block = $( this ).parents( ".quotes_box_and_tips" );									
-								var tip = block.find( ".tips_box" ).attr( "data-id" );
-								var quote = block.find( ".quotes_box" ).attr( "data-id" );
-								$.ajax({
-									type: "POST",
-									url: "' . admin_url( 'admin-ajax.php' ) . '",
-									data: {
-										action: "qtsndtps_change_block",
-										exclude: [ tip, quote ]
-									},
-									success: function(response) {
-										block.replaceWith( response );										
-									},
-									error: function( error ) {
-										console.log( error );
-									}
-								});
-							});
-						});
-					})(jQuery);';
 			wp_register_script( 'qtsndtps-script-update', '', array( 'jquery' ), $qtsndtps_plugin_info['Version'], true );
 			wp_enqueue_script( 'qtsndtps-script-update' );
 			wp_add_inline_script( 'qtsndtps-script-update', sprintf( $script ) );
@@ -1768,6 +1763,7 @@ add_action( 'admin_enqueue_scripts', 'qtsndtps_wp_head' );
 add_action( 'wp_enqueue_scripts', 'qtsndtps_wp_head' );
 /*AJAX and connection scripts */
 add_action( 'wp_ajax_qtsndtps_change_block', 'qtsndtps_change_block' );
+add_action( 'wp_ajax_nopriv_qtsndtps_change_block', 'qtsndtps_change_block' );
 add_action( 'wp_enqueue_scripts', 'qtsndtps_enqueue_scripts' );
 
 add_action( 'save_post', 'qtsndtps_save_custom_quote' );

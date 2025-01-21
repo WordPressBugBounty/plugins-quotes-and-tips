@@ -43,11 +43,12 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 			global $qtsndtps_options, $qtsndtps_plugin_info;
 
 			$tabs = array(
-				'settings'    => array( 'label' => __( 'Settings', 'quotes-and-tips' ) ),
-				'appearance'  => array( 'label' => __( 'Appearance', 'quotes-and-tips' ) ),
-				'misc'        => array( 'label' => __( 'Misc', 'quotes-and-tips' ) ),
-				'custom_code' => array( 'label' => __( 'Custom Code', 'quotes-and-tips' ) ),
+				'settings'      => array( 'label' => __( 'Settings', 'quotes-and-tips' ) ),
+				'appearance'    => array( 'label' => __( 'Appearance', 'quotes-and-tips' ) ),
+				'misc'          => array( 'label' => __( 'Misc', 'quotes-and-tips' ) ),
+				'custom_code'   => array( 'label' => __( 'Custom Code', 'quotes-and-tips' ) ),
 				'import-export' => array( 'label' => __( 'Import / Export', 'quotes-and-tips' ) ),
+				'license'       => array( 'label' => __( 'License Key', 'custom-search-plugin' ) ),
 			);
 
 			parent::__construct(
@@ -60,6 +61,8 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 					'tabs'            => $tabs,
 					'wp_slug'         => 'quotes-and-tips',
 					'doc_link'        => 'https://bestwebsoft.com/documentation/quotes-and-tips/quotes-and-tips-user-guide/',
+					'link_key'        => '325922465d28e1eda911d9eb5add34e9',
+					'link_pn'         => '82',
 				)
 			);
 
@@ -242,7 +245,6 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 					$this->options['background_image_repeat_x'] = isset( $_POST['qtsndtps_background_image_repeat_x'] ) ? 1 : 0;
 					$this->options['background_image_repeat_y'] = isset( $_POST['qtsndtps_background_image_repeat_y'] ) ? 1 : 0;
 					$this->options['background_image_cover']    = isset( $_POST['qtsndtps_background_image_cover'] ) ? 1 : 0;
-					$this->options['author_position']           = isset( $_POST['qtsndtps_author_position'] ) ? sanitize_text_field( wp_unslash( $_POST['qtsndtps_author_position'] ) ) : '';
 					$this->options['background_image_position'] = isset( $_POST['qtsndtps_background_image_position'] ) ? $this->crop_array[ absint( $_POST['qtsndtps_background_image_position'] ) ] : array( 'left', 'bottom' );
 					$this->options['background_opacity']        = isset( $_POST['qtsndtps_background_opacity'] ) ? floatval( $_POST['qtsndtps_background_opacity'] ) : 1;
 					$this->options['border_radius']             = isset( $_POST['qtsndtps_border_radius'] ) ? absint( $_POST['qtsndtps_border_radius'] ) : 0;
@@ -266,7 +268,7 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 								$sndr_options['priority_for_post_letters']['quote'] = isset( $_POST['sndr_priority']['quote'] ) ? absint( $_POST['sndr_priority']['quote'] ) : '';
 							}
 						} else {
-							$key = array_search( 'quote', $sndr_options['automailout_new_post'] );
+							$key = isset( $sndr_options['automailout_new_post'] ) && is_array( $sndr_options['automailout_new_post'] ) ? array_search( 'quote', $sndr_options['automailout_new_post'] ) : false;
 							if ( false !== $key ) {
 								unset( $sndr_options['automailout_new_post'][ $key ] );
 								unset( $sndr_options['priority_for_post_letters']['quote'] );
@@ -276,7 +278,7 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 						}
 						/* mailout when publishing tips */
 						if ( isset( $_POST['qtsndtps_sndr_mailout_tips'] ) ) {
-							$key = array_search( 'tips', $sndr_options['automailout_new_post'] );
+							$key = isset( $sndr_options['automailout_new_post'] ) && is_array( $sndr_options['automailout_new_post'] ) ? array_search( 'tips', $sndr_options['automailout_new_post'] ) : false;
 							if ( false !== $key ) {
 								$sndr_options['automailout_new_post'][]            = 'tips';
 								$sndr_options['group_for_post']['tips']            = isset( $_POST['sndr_distribution_select']['tips'] ) ? absint( $_POST['sndr_distribution_select']['tips'] ) : '';
@@ -284,7 +286,7 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 								$sndr_options['priority_for_post_letters']['tips'] = isset( $_POST['sndr_priority']['tips'] ) ? absint( $_POST['sndr_priority']['tips'] ) : '';
 							}
 						} else {
-							$key = array_search( 'tips', $sndr_options['automailout_new_post'] );
+							$key = isset( $sndr_options['automailout_new_post'] ) && is_array( $sndr_options['automailout_new_post'] ) ? array_search( 'tips', $sndr_options['automailout_new_post'] ) : false;
 							if ( false !== $key ) {
 								unset( $sndr_options['automailout_new_post'][ $key ] );
 								unset( $sndr_options['priority_for_post_letters']['tips'] );
@@ -312,7 +314,11 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 		public function tab_settings() {
 			if ( is_plugin_active( 'sender-pro/sender-pro.php' ) ) {
 				$sndr_options = get_option( 'sndr_options' );
-			} ?>
+			} 
+			if ( '3' === $this->options['page_load'] ) {
+				$this->options['page_load'] = '1';
+			}
+			?>
 			<h3 class="bws_tab_label"><?php esc_html_e( 'Quotes and Tips Settings', 'quotes-and-tips' ); ?></h3>
 			<?php $this->help_phrase(); ?>
 			<hr>
@@ -323,8 +329,19 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 						<fieldset>
 							<label><input type="radio" class="bws_option_affect" data-affect-hide=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="1"<?php checked( $this->options['page_load'] ); ?> /> <?php esc_html_e( 'Page reload', 'quotes-and-tips' ); ?></label><br />
 							<label><input type="radio" class="bws_option_affect" data-affect-hide=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="2"<?php checked( '2', $this->options['page_load'] ); ?> /> <?php esc_html_e( 'Once a day', 'quotes-and-tips' ); ?></label><br /> 
-							<label><input type="radio" class="bws_option_affect" data-affect-show=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="3" <?php checked( '3', $this->options['page_load'] ); ?> /> <?php esc_html_e( 'Button for changing quotes', 'quotes-and-tips' ); ?></label><br />
-							<label><input type="radio" class="bws_option_affect" data-affect-show=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="0"<?php checked( '0', $this->options['page_load'] ); ?> /> <?php esc_html_e( 'AJAX (no page reload)', 'quotes-and-tips' ); ?></label>
+							<label><input type="radio" class="bws_option_affect" data-affect-show=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="0"<?php checked( '0', $this->options['page_load'] ); ?> /> <?php esc_html_e( 'AJAX (no page reload)', 'quotes-and-tips' ); ?></label><br />
+							<?php if ( ! $this->hide_pro_tabs ) { ?>
+								<div class="bws_pro_version_bloc">
+									<div class="bws_pro_version_table_bloc">
+										<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'custom-search-plugin' ); ?>"></button>
+										<div class="bws_table_bg"></div>
+										<label><input type="radio" class="bws_option_affect" data-affect-show=".qtsndtps_change_frequency" name="qtsndtps_page_load" value="3" <?php checked( '3', $this->options['page_load'] ); ?> /> <?php esc_html_e( 'Button for changing quotes', 'quotes-and-tips' ); ?></label>
+									</div>
+									<?php $this->bws_pro_block_links(); ?>
+								</div>
+								<?php
+							}
+							?>
 						</fieldset>
 					</td>
 				</tr>
@@ -567,15 +584,30 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 						</fieldset>
 					</td>
 				</tr>
-				<tr class="qtsndtps_hidden">
-					<th scope="row"><?php esc_html_e( 'Author position', 'quotes-and-tips' ); ?></th>
-					<td>
-						<fieldset>
-							<label><input type="radio" name="qtsndtps_author_position" value="0" class="qtsndtps_author_position"<?php checked( '0', $this->options['author_position'] ); ?> /> <?php esc_html_e( 'Left', 'quotes-and-tips' ); ?></label><br />
-							<label><input type="radio" name="qtsndtps_author_position" value="1" class="qtsndtps_author_position"<?php checked( $this->options['author_position'] ); ?> /> <?php esc_html_e( 'Right', 'quotes-and-tips' ); ?></label><br/>
-						</fieldset>
-					</td>
-				</tr>
+			</table>
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc">
+					<div class="bws_pro_version_table_bloc">
+						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'custom-search-plugin' ); ?>"></button>
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version">
+							<tr class="qtsndtps_hidden">
+								<th scope="row"><?php esc_html_e( 'Author position', 'quotes-and-tips' ); ?></th>
+								<td>
+									<fieldset>
+										<label><input type="radio" value="0" class="qtsndtps_author_position" checked="checked" /> <?php esc_html_e( 'Left', 'quotes-and-tips' ); ?></label><br />
+										<label><input type="radio" value="1" class="qtsndtps_author_position" /> <?php esc_html_e( 'Right', 'quotes-and-tips' ); ?></label><br/>
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+				<?php
+			}
+			?>
+			<table class="form-table">
 				<tr class="qtsndtps_hidden">
 					<th><?php esc_html_e( 'Border Radius', 'quotes-and-tips' ); ?></th>
 					<td>
@@ -599,16 +631,31 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 						<input type="text" value="<?php echo esc_attr( $this->options['box_shadow_color'] ); ?>" name="qtsndtps_box_shadow_color" class="qtsndtps_box_shadow_color" data-default-color="#FFFFFF" />
 					</td>
 				</tr>
-				<tr class="qtsndtps_hidden">
-					<th><?php esc_html_e( 'Block Size' ); ?></th>
-					<td>
-						<fieldset>
-							<label><input class="small-text" name="qtsndtps_block_width" type="text" id="qtsndtps_block_width" value="<?php echo esc_attr( $this->options['block_width'] ); ?>" /> <?php esc_html_e( 'Width', 'quotes-and-tips' ); ?> (%)<br />
-							<span class="bws_info"><?php echo esc_html__( 'Pay attention! In some themes this option may not work.', 'quotes-and-tips' ); ?></span></label><br />
-							<label><input class="small-text" name="qtsndtps_block_height" type="text" id="qtsndtps_block_height" value="<?php echo esc_attr( $this->options['block_height'] ); ?>" /> <?php esc_html_e( 'Height', 'quotes-and-tips' ); ?> (px)</label><br />
-						</fieldset>
-					</td>
-				</tr>
+			</table>
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc">
+					<div class="bws_pro_version_table_bloc">
+						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'custom-search-plugin' ); ?>"></button>
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version">
+							<tr class="qtsndtps_hidden">
+								<th><?php esc_html_e( 'Block Size' ); ?></th>
+								<td>
+									<fieldset>
+										<label><input class="small-text" type="text" value="100" /> <?php esc_html_e( 'Width', 'quotes-and-tips' ); ?> (%)<br />
+										<span class="bws_info"><?php echo esc_html__( 'Pay attention! In some themes this option may not work.', 'quotes-and-tips' ); ?></span></label><br />
+										<label><input class="small-text" type="text" value="350" /> <?php esc_html_e( 'Height', 'quotes-and-tips' ); ?> (px)</label><br />
+									</fieldset>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+				<?php
+			}
+			?>
+			<table class="form-table">
 				<tr class="qtsndtps-button-text <?php echo 3 !== $this->options['page_load'] ? 'hidden' : ''; ?>">
 					<th><?php esc_html_e( 'Button Text', 'quotes-and-tips' ); ?></th>
 					<td>
@@ -627,24 +674,32 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 		 */
 		public function additional_import_export_options() {
 			?>
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row"><?php esc_html_e( 'Export to CSV', 'quotes-and-tips' ); ?></th>
-					<td>
-						<input type="submit" name="qtsndtps_export_submit" class="button-secondary" value="<?php esc_html_e( 'Export Now', 'quotes-and-tips' ); ?>" />
-						<?php wp_nonce_field( 'qtsndtps_export_action', 'qtsndtps_export_field' ); ?>
-					</td>
-				</tr>
-				<tr valign="top">
-					<th scope="row"><?php esc_html_e( 'Import to CSV', 'quotes-and-tips' ); ?></th>
-					<td>
-						<input type="file" name="qtsndtps_csv_file">
-						<input type="submit" name="qtsndtps_import_submit" class="button-secondary" value="<?php esc_html_e( 'Import Now', 'quotes-and-tips' ); ?>" />
-						<?php wp_nonce_field( 'qtsndtps_import_action', 'qtsndtps_import_field' ); ?>
-					</td>
-				</tr>
-			</table>
-			<?php
+			<?php if ( ! $this->hide_pro_tabs ) { ?>
+				<div class="bws_pro_version_bloc">
+					<div class="bws_pro_version_table_bloc">
+						<button type="submit" name="bws_hide_premium_options" class="notice-dismiss bws_hide_premium_options" title="<?php esc_html_e( 'Close', 'custom-search-plugin' ); ?>"></button>
+						<div class="bws_table_bg"></div>
+						<table class="form-table bws_pro_version">
+							<tr valign="top">
+								<th scope="row"><?php esc_html_e( 'Export to CSV', 'quotes-and-tips' ); ?></th>
+								<td>
+									<input type="submit" class="button-secondary" value="<?php esc_html_e( 'Export Now', 'quotes-and-tips' ); ?>" /><br />
+									<span class="bws_info"><?php echo esc_html__( 'Please fill in all fields in quote to make the export/import function work correctly.', 'quotes-and-tips' ); ?></span>
+								</td>
+							</tr>
+							<tr valign="top">
+								<th scope="row"><?php esc_html_e( 'Import to CSV', 'quotes-and-tips' ); ?></th>
+								<td>
+									<input type="file">
+									<input type="submit" class="button-secondary" value="<?php esc_html_e( 'Import Now', 'quotes-and-tips' ); ?>" />
+								</td>
+							</tr>
+						</table>
+					</div>
+					<?php $this->bws_pro_block_links(); ?>
+				</div>
+				<?php
+			}
 		}
 
 		/**

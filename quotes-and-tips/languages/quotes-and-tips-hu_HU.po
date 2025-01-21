@@ -1,531 +1,1270 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: quotes_and_tips\n"
+"Project-Id-Version: bestwebsoft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 12:56+0300\n"
-"PO-Revision-Date: 2018-06-11 12:56+0300\n"
-"Last-Translator: Áprily Péter <info@aprily.com>\n"
-"Language-Team: bestwebsoft <plugin@bestwebsoft.com>\n"
-"Language: ru_RU\n"
+"POT-Creation-Date: 2025-01-21 15:23+0200\n"
+"PO-Revision-Date: 2025-01-21 15:24+0200\n"
+"Last-Translator: \n"
+"Language-Team: bestwebsoft.com <https://support.bestwebsoft.com>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;sprintf;printf;esc_html__;"
+"esc_html_e\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: js\n"
+"X-Poedit-SearchPathExcluded-1: bws_menu\n"
 
-#: includes/class-qtsndtps-settings.php:24 quotes-and-tips.php:38
-#: quotes-and-tips.php:42 quotes-and-tips.php:433 quotes-and-tips.php:451
+#: includes/class-qtsndtps-settings.php:46 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:925 quotes-and-tips.php:950
 msgid "Settings"
 msgstr "Beállítások"
 
-#: includes/class-qtsndtps-settings.php:25
-msgid "Appearance"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:26
-msgid "Misc"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:27
-msgid "Custom Code"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:45
-msgid "Left"
-msgstr "Bal"
-
-#: includes/class-qtsndtps-settings.php:46
-#: includes/class-qtsndtps-settings.php:52
-msgid "Center"
-msgstr "Közép"
-
 #: includes/class-qtsndtps-settings.php:47
-msgid "Right"
-msgstr "Jobb"
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: includes/class-qtsndtps-settings.php:48
+msgid "Misc"
+msgstr "Vegyes"
+
+#: includes/class-qtsndtps-settings.php:49
+msgid "Custom Code"
+msgstr "Egyéni kód"
+
+#: includes/class-qtsndtps-settings.php:50
+msgid "Import / Export"
+msgstr "Import / Export"
 
 #: includes/class-qtsndtps-settings.php:51
-msgid "Top"
-msgstr "Felül"
+msgid "License Key"
+msgstr "Licenckulcs"
 
-#: includes/class-qtsndtps-settings.php:53
-msgid "Bottom"
-msgstr "Alul"
-
-#: includes/class-qtsndtps-settings.php:57
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:74
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
-#: includes/class-qtsndtps-settings.php:58
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:75
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
-#: includes/class-qtsndtps-settings.php:59
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:76
 msgid "Custom"
-msgstr ""
+msgstr "Egyedi"
 
-#: includes/class-qtsndtps-settings.php:102
-msgid "There is no data about the uploaded file."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:104
-msgid "Image was not uploaded by HTTP POST. Possible file upload attack."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:106
-msgid "Wrong file format. The file should be png, jpg(jpeg) or gif."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:108
-msgid "The file size should not exceed"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:116
-msgid "Could not create image directory."
-msgstr ""
+#: includes/class-qtsndtps-settings.php:114
+msgid "Sorry, your nonce did not verify."
+msgstr "Elnézést, a nonce nincs elfogadva."
 
 #: includes/class-qtsndtps-settings.php:120
-#, php-format
-msgid "The uploaded file could not be moved to %s."
-msgstr "A feltöltött file nem mozgatható %s-ba."
+msgid "Error: Failed to upload the CSV file."
+msgstr "Hiba: CSV fájl feltöltése sikertelenül."
 
-#: includes/class-qtsndtps-settings.php:134
-msgid "Could not save background image file to WordPress media library."
-msgstr ""
+#: includes/class-qtsndtps-settings.php:122
+msgid "Import completed."
+msgstr "Az importálás befejeződött."
 
-#: includes/class-qtsndtps-settings.php:165
-msgid "Settings saved."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:171 quotes-and-tips.php:38
-#: quotes-and-tips.php:42 quotes-and-tips.php:422
-msgid "Quotes and Tips Settings"
-msgstr "Idézetek és ötletek Beállításai"
+#: includes/class-qtsndtps-settings.php:174
+msgid "There is no data about the uploaded file."
+msgstr "A feltöltött fájlról nincsenek adatok."
 
 #: includes/class-qtsndtps-settings.php:176
-msgid "Display Settings"
+msgid "Image/video was not uploaded by HTTP POST. Possible file upload attack."
 msgstr ""
+"A kép/videó nem HTTP POST segítségével került feltöltésre. Lehetséges "
+"fájlfeltöltési támadás."
 
-#: includes/class-qtsndtps-settings.php:179
-msgid "Random Order With the Page Reload"
+#: includes/class-qtsndtps-settings.php:178
+msgid ""
+"Wrong file format. The image should be png, jpg(jpeg) or gif, the video "
+"should be mp4, m4v, webm, ogv or flv"
 msgstr ""
+"Rossz fájlformátum. A képnek png, jpg(jpeg) vagy gif, a videónak mp4, m4v, "
+"webm, ogv vagy flv formátumúnak kell lennie"
 
 #: includes/class-qtsndtps-settings.php:180
-msgid "Random Order Without the Page Reload"
-msgstr ""
+msgid "The file size should not exceed"
+msgstr "A fájl mérete nem haladhatja meg"
 
-#: includes/class-qtsndtps-settings.php:181
-msgid "Change Frequency (in seconds)"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:186
-msgid "Title Options"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:189
-msgid "Set Title From Post"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:182
+msgid "Sorry, you are not allowed to upload this file type."
+msgstr "Sajnáljuk, nem töltheti fel ezt a fájltípust."
 
 #: includes/class-qtsndtps-settings.php:190
-msgid "Set Custom Titles"
-msgstr ""
+msgid "Could not create image directory."
+msgstr "Nem sikerült létrehozni a képkönyvtárat."
 
 #: includes/class-qtsndtps-settings.php:195
+#, php-format
+msgid "The uploaded file could not be moved to %s."
+msgstr "A feltöltött fájl nem helyezhető át a %s."
+
+#: includes/class-qtsndtps-settings.php:211
+msgid "Could not save background image/video file to WordPress media library."
+msgstr "Nem sikerült elmenteni a háttérkép/videó fájlt a WordPress médiatárba."
+
+#: includes/class-qtsndtps-settings.php:302
+msgid "Settings saved."
+msgstr "A beállításokat elmentettük."
+
+#: includes/class-qtsndtps-settings.php:322 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:906
+msgid "Quotes and Tips Settings"
+msgstr "Idézetek és tippek Beállítások"
+
+#: includes/class-qtsndtps-settings.php:327
+msgid "Random Change on"
+msgstr "Random Change on"
+
+#: includes/class-qtsndtps-settings.php:330
+msgid "Page reload"
+msgstr "Az oldal újratöltése"
+
+#: includes/class-qtsndtps-settings.php:331
+msgid "Once a day"
+msgstr "Naponta egyszer"
+
+#: includes/class-qtsndtps-settings.php:332
+msgid "AJAX (no page reload)"
+msgstr "AJAX (nincs oldal újratöltés)"
+
+#: includes/class-qtsndtps-settings.php:336
+#: includes/class-qtsndtps-settings.php:591
+#: includes/class-qtsndtps-settings.php:638
+#: includes/class-qtsndtps-settings.php:680
+msgid "Close"
+msgstr "Bezár"
+
+#: includes/class-qtsndtps-settings.php:338
+msgid "Button for changing quotes"
+msgstr "Gomb az idézetek megváltoztatásához"
+
+#: includes/class-qtsndtps-settings.php:349
+msgid "Change Frequency"
+msgstr "Változás gyakorisága"
+
+#: includes/class-qtsndtps-settings.php:351
+msgid "sec"
+msgstr "másodperc"
+
+#: includes/class-qtsndtps-settings.php:355
+msgid "Title Options"
+msgstr "Cím lehetőségek"
+
+#: includes/class-qtsndtps-settings.php:358
+msgid "Set Title From Post"
+msgstr "Cím beállítása a hozzászólásból"
+
+#: includes/class-qtsndtps-settings.php:359
+msgid "Set Custom Titles"
+msgstr "Egyéni címek beállítása"
+
+#: includes/class-qtsndtps-settings.php:364
 msgid "Tip Title"
-msgstr ""
+msgstr "Tipp Cím"
 
-#: includes/class-qtsndtps-settings.php:201
+#: includes/class-qtsndtps-settings.php:370
 msgid "Quote Title"
-msgstr ""
+msgstr "Idézet cím"
 
-#: includes/class-qtsndtps-settings.php:207
+#: includes/class-qtsndtps-settings.php:376
 msgid "Add Quotes and Tips to the Search"
+msgstr "Idézetek és tippek hozzáadása a kereséshez"
+
+#: includes/class-qtsndtps-settings.php:386
+#, php-format
+msgid "Go to %s Settings to include quotes and tips to your website search"
 msgstr ""
+"Menjen a %s Beállítások menüponthoz, hogy idézeteket és tippeket adhasson a "
+"webhelykereséshez"
 
-#: includes/class-qtsndtps-settings.php:223 quotes-and-tips.php:213
-#: quotes-and-tips.php:214
-msgid "Quotes"
-msgstr "Idézetek"
-
-#: includes/class-qtsndtps-settings.php:224
-msgid "Enable to include quotes to your website search using"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:227 quotes-and-tips.php:125
-#: quotes-and-tips.php:184 quotes-and-tips.php:185
-msgid "Tips"
-msgstr "Ötletek"
-
-#: includes/class-qtsndtps-settings.php:228
-msgid "Enable to include tips to your website search using"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:233
-#: includes/class-qtsndtps-settings.php:237
+#: includes/class-qtsndtps-settings.php:393
+#: includes/class-qtsndtps-settings.php:399
 msgid ""
 "Enable to include quotes and tips to your website search. Custom Search "
 "plugin is required."
 msgstr ""
+"Lehetővé teszi, hogy idézetek és tippek is bekerüljenek a weboldal "
+"keresésébe. Egyéni kereső plugin szükséges."
 
-#: includes/class-qtsndtps-settings.php:233
+#: includes/class-qtsndtps-settings.php:393
 msgid "Activate Now"
-msgstr ""
+msgstr "Aktiválja most"
 
-#: includes/class-qtsndtps-settings.php:237
+#: includes/class-qtsndtps-settings.php:399
+#: includes/class-qtsndtps-settings.php:426
 msgid "Install Now"
-msgstr ""
+msgstr "Telepítés most"
 
-#: includes/class-qtsndtps-settings.php:246
+#: includes/class-qtsndtps-settings.php:404
+msgid "Automatic Mailout when Publishing a New:"
+msgstr "Automatikus postázás új kiadásakor:"
+
+#: includes/class-qtsndtps-settings.php:413
+#, php-format
+msgid ""
+"Go to %s Settings to include quotes and tips to automatic mailout when "
+"publishing a new quotes and tips"
+msgstr ""
+"Menjen a %s Beállítások az idézetek és tippek automatikus kiküldéséhez, "
+"amikor új idézeteket és tippeket tesz közzé"
+
+#: includes/class-qtsndtps-settings.php:420
+#: includes/class-qtsndtps-settings.php:426
+msgid ""
+"Enable to automatic mailout when publishing a new quotes and tips. Sender "
+"Pro plugin is required."
+msgstr ""
+"Engedélyezze az automatikus kiküldést új idézetek és tippek közzétételekor. "
+"Sender Pro plugin szükséges."
+
+#: includes/class-qtsndtps-settings.php:420
+msgid "Ativate Now"
+msgstr "Ativate most"
+
+#: includes/class-qtsndtps-settings.php:431
+msgid "Remove Quatation Marks"
+msgstr "Quatation Marks eltávolítása"
+
+#: includes/class-qtsndtps-settings.php:436
+msgid "Enable to remove quatation marks."
+msgstr "Engedélyezi a kvatációs jelek eltávolítását."
+
+#: includes/class-qtsndtps-settings.php:454
 msgid "Appearance Settings"
-msgstr ""
+msgstr "Megjelenési beállítások"
 
-#: includes/class-qtsndtps-settings.php:251
-msgid "Use Default Styles"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:459
+msgid "Custom Styles"
+msgstr "Egyéni stílusok"
 
-#: includes/class-qtsndtps-settings.php:257
+#: includes/class-qtsndtps-settings.php:463
+msgid "Enable to apply custom styles."
+msgstr "Egyéni stílusok alkalmazásának engedélyezése."
+
+#: includes/class-qtsndtps-settings.php:470
 msgid "Background Color"
-msgstr ""
+msgstr "Háttérszín"
 
-#: includes/class-qtsndtps-settings.php:265
+#: includes/class-qtsndtps-settings.php:476
 msgid "Text Color"
-msgstr ""
+msgstr "Szövegszín"
 
-#: includes/class-qtsndtps-settings.php:273
-msgid "Background Image"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:482
+msgid "Title Text Size"
+msgstr "Cím Szöveg mérete"
 
-#: includes/class-qtsndtps-settings.php:289
-msgid "Current Image"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:489
+msgid "Text Size"
+msgstr "Szöveg méret"
 
-#: includes/class-qtsndtps-settings.php:300
+#: includes/class-qtsndtps-settings.php:496
+msgid "Background Image/Video"
+msgstr "Háttérkép/Videó"
+
+#: includes/class-qtsndtps-settings.php:503
+#, php-format
+msgid ""
+"<input type=\"radio\" class=\"qtsndtps_additions_block "
+"qtsndtps_background_image \" name=\"qtsndtps_background_image\" value=\"%s\" "
+"%s />%s"
+msgstr ""
+"<input type=\"radio\" class=\"qtsndtps_additions_block "
+"qtsndtps_background_image \" name=\"qtsndtps_background_image\" value=\"%s\" "
+"%s />%s"
+
+#: includes/class-qtsndtps-settings.php:515
+msgid ""
+"The image should be png, jpg(jpeg) or gif, the video should be mp4, m4v, "
+"webm, ogv or flv. The file size should not exceed"
+msgstr ""
+"A kép legyen png, jpg(jpeg) vagy gif, a videó legyen mp4, m4v, webm, ogv "
+"vagy flv. A fájl mérete nem haladhatja meg"
+
+#: includes/class-qtsndtps-settings.php:517
+msgid "Current Background"
+msgstr "Jelenlegi háttér"
+
+#: includes/class-qtsndtps-settings.php:537
+msgid "Your browser does not support the video tag"
+msgstr "Az Ön böngészője nem támogatja a video tag-et"
+
+#: includes/class-qtsndtps-settings.php:552
+msgid "Background Image Opacity"
+msgstr "Háttérkép átlátszatlansága"
+
+#: includes/class-qtsndtps-settings.php:559
 msgid "Background Image Repeat"
-msgstr ""
+msgstr "Háttérkép ismétlés"
 
-#: includes/class-qtsndtps-settings.php:303
+#: includes/class-qtsndtps-settings.php:562
 msgid "Horizontal Repeat (x)"
-msgstr ""
+msgstr "Vízszintes ismétlés (x)"
 
-#: includes/class-qtsndtps-settings.php:304
+#: includes/class-qtsndtps-settings.php:563
 msgid "Vertical Repeat (y)"
-msgstr ""
+msgstr "Függőleges ismétlés (y)"
 
-#: includes/class-qtsndtps-settings.php:309
-msgid "Background Image Horizontal Alignment"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:564
+msgid "Cover"
+msgstr "Borító"
 
-#: includes/class-qtsndtps-settings.php:319
-msgid "Background Image Vertical Alignment"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:569
+msgid "Background Image Alignment"
+msgstr "Háttérkép igazítása"
 
-#: includes/class-qtsndtps-settings.php:340
+#: includes/class-qtsndtps-settings.php:595
+msgid "Author position"
+msgstr "Szerzői pozíció"
+
+#: includes/class-qtsndtps-settings.php:598
+msgid "Left"
+msgstr "Bal"
+
+#: includes/class-qtsndtps-settings.php:599
+msgid "Right"
+msgstr "Jobbra"
+
+#: includes/class-qtsndtps-settings.php:612
+msgid "Border Radius"
+msgstr "Szegély kerekítése"
+
+#: includes/class-qtsndtps-settings.php:619
+msgid "Box Shadow Size"
+msgstr "Doboz árnyék mérete"
+
+#: includes/class-qtsndtps-settings.php:622
+msgid "Offset x"
+msgstr "Offset x"
+
+#: includes/class-qtsndtps-settings.php:623
+msgid "Offset y"
+msgstr "Offset y"
+
+#: includes/class-qtsndtps-settings.php:624
+msgid "Blur radius"
+msgstr "Elmosódás sugara"
+
+#: includes/class-qtsndtps-settings.php:629
+msgid "Box Shadow Color"
+msgstr "Doboz árnyék szín"
+
+#: includes/class-qtsndtps-settings.php:642
+msgid "Block Size"
+msgstr "Blokk mérete"
+
+#: includes/class-qtsndtps-settings.php:645
+msgid "Width"
+msgstr "Szélesség"
+
+#: includes/class-qtsndtps-settings.php:646
+msgid "Pay attention! In some themes this option may not work."
+msgstr "Figyeljen oda! Egyes témákban ez az opció nem biztos, hogy működik."
+
+#: includes/class-qtsndtps-settings.php:647
+msgid "Height"
+msgstr "Magasság"
+
+#: includes/class-qtsndtps-settings.php:660
+msgid "Button Text"
+msgstr "Gomb szövege"
+
+#: includes/class-qtsndtps-settings.php:663
+msgid "If the ability to change quotes is enabled using the button."
+msgstr ""
+"Ha az idézetek megváltoztatásának lehetősége engedélyezve van a gombbal."
+
+#: includes/class-qtsndtps-settings.php:684
+msgid "Export to CSV"
+msgstr "Exportálás CSV fájlba"
+
+#: includes/class-qtsndtps-settings.php:686
+msgid "Export Now"
+msgstr "Exportálás Most"
+
+#: includes/class-qtsndtps-settings.php:687
+msgid ""
+"Please fill in all fields in quote to make the export/import function work "
+"correctly."
+msgstr ""
+"Kérjük, töltse ki az összes mezőt az idézetben, hogy az export/import "
+"funkció megfelelően működjön."
+
+#: includes/class-qtsndtps-settings.php:691
+msgid "Import to CSV"
+msgstr "Importálás CSV-be"
+
+#: includes/class-qtsndtps-settings.php:694
+msgid "Import Now"
+msgstr "Importálás most"
+
+#: includes/class-qtsndtps-settings.php:714
 msgid "Quotes and Tips"
-msgstr ""
+msgstr "Idézetek és tippek"
 
-#: includes/class-qtsndtps-settings.php:343
+#: includes/class-qtsndtps-settings.php:717
 msgid ""
 "Add Quotes and Tips block to your page or post by using the following "
 "shortcode:"
 msgstr ""
+"Adjon hozzá Idézetek és tippek blokkot az oldalához vagy posztjához a "
+"következő rövidkóddal:"
 
-#: includes/class-qtsndtps-settings.php:345
-#, fuzzy
+#: includes/class-qtsndtps-settings.php:719
 msgid "Or add the following strings into the template source code"
-msgstr "vagy adja hozzá a következő sorokat a sablon forráskódjához"
+msgstr "Vagy adjuk hozzá a következő karakterláncokat a sablon forráskódjához"
 
-#: quotes-and-tips.php:126
+#: quotes-and-tips.php:62 quotes-and-tips.php:69
+msgid "Upgrade to Pro"
+msgstr "Frissítés a Pro változatra"
+
+#: quotes-and-tips.php:218 quotes-and-tips.php:338 quotes-and-tips.php:339
+msgid "Tips"
+msgstr "Tippek"
+
+#: quotes-and-tips.php:219
 msgid "The quotes from our clients"
-msgstr ""
+msgstr "Ügyfeleink idézetei"
 
-#: quotes-and-tips.php:194
+#: quotes-and-tips.php:233
+msgid "Next"
+msgstr "Következő"
+
+#: quotes-and-tips.php:312 quotes-and-tips.php:1658
+msgid "Tips Categories"
+msgstr "Tippek Kategóriák"
+
+#: quotes-and-tips.php:313
+msgid "Tips Category"
+msgstr "Tippek kategória"
+
+#: quotes-and-tips.php:314
+msgid "Add Tips Category"
+msgstr "Tippek hozzáadása kategória"
+
+#: quotes-and-tips.php:315
+msgid "Add New Tips Category"
+msgstr "Új tippek kategória hozzáadása"
+
+#: quotes-and-tips.php:316 quotes-and-tips.php:317
+msgid "Edit Tips Category"
+msgstr "Tippek kategóriájának szerkesztése"
+
+#: quotes-and-tips.php:318
+msgid "New Tips Category"
+msgstr "Új tippek kategória"
+
+#: quotes-and-tips.php:319 quotes-and-tips.php:320
+msgid "View Tips Category"
+msgstr "Tippek kategória megtekintése"
+
+#: quotes-and-tips.php:321
+msgid "Find Tips Category"
+msgstr "Tippek keresése kategória"
+
+#: quotes-and-tips.php:322
+msgid "No Tips Categories found"
+msgstr "Nem találtunk tippeket Kategóriák"
+
+#: quotes-and-tips.php:323
+msgid "No Tips Categories found in Trash"
+msgstr "Nincs Tippek kategóriák találtak a Trash"
+
+#: quotes-and-tips.php:324
+msgid "Parent Tips Category"
+msgstr "Szülői tippek kategória"
+
+#: quotes-and-tips.php:325
+msgid "Tips Categories list navigation"
+msgstr "Tippek Kategóriák listás navigáció"
+
+#: quotes-and-tips.php:326
+msgid "Tips Categories list"
+msgstr "Tippek Kategóriák listája"
+
+#: quotes-and-tips.php:349
 msgid "Add a New Tip"
-msgstr ""
+msgstr "Új tipp hozzáadása"
 
-#: quotes-and-tips.php:195
+#: quotes-and-tips.php:350
 msgid "Edit Tip"
-msgstr ""
+msgstr "Szerkesztési tipp"
 
-#: quotes-and-tips.php:196
+#: quotes-and-tips.php:351
 msgid "New Tip"
-msgstr ""
+msgstr "Új tipp"
 
-#: quotes-and-tips.php:197
+#: quotes-and-tips.php:352
 msgid "View Tip"
-msgstr ""
+msgstr "Tipp megtekintése"
 
-#: quotes-and-tips.php:198
+#: quotes-and-tips.php:353
 msgid "Search Tip"
-msgstr ""
+msgstr "Keresési tipp"
 
-#: quotes-and-tips.php:199
+#: quotes-and-tips.php:354
 msgid "No tips found"
-msgstr "Nem találhatók ötletek"
+msgstr "Nem találtunk tippeket"
 
-#: quotes-and-tips.php:200
+#: quotes-and-tips.php:355
 msgid "No tips found in Trash"
-msgstr "A Lomtárban nem találhatók ötletek"
+msgstr "Nem találtunk tippeket a Trash-ben"
 
-#: quotes-and-tips.php:201
+#: quotes-and-tips.php:356
 msgid "Filter tips list"
-msgstr ""
+msgstr "Szűrő tippek listája"
 
-#: quotes-and-tips.php:202
+#: quotes-and-tips.php:357
 msgid "Tips list navigation"
-msgstr ""
+msgstr "Tippek listájának navigálása"
 
-#: quotes-and-tips.php:203
-#, fuzzy
+#: quotes-and-tips.php:358
 msgid "Tips list"
-msgstr "Ötletek"
+msgstr "Tippek listája"
 
-#: quotes-and-tips.php:223
-msgid "Add a New Quote"
-msgstr ""
+#: quotes-and-tips.php:377 quotes-and-tips.php:1638
+msgid "Quotes Categories"
+msgstr "Idézet kategóriák"
 
-#: quotes-and-tips.php:224
-msgid "Edit Quote"
-msgstr ""
+#: quotes-and-tips.php:378
+msgid "Quotes Category"
+msgstr "Idézetek kategória"
 
-#: quotes-and-tips.php:225
-msgid "New Quote"
-msgstr ""
+#: quotes-and-tips.php:379
+msgid "Add Quotes Category"
+msgstr "Idézetek hozzáadása kategória"
 
-#: quotes-and-tips.php:226
-msgid "View Quote"
-msgstr ""
+#: quotes-and-tips.php:380
+msgid "Add New Quotes Category"
+msgstr "Új idézet kategória hozzáadása"
 
-#: quotes-and-tips.php:227
-msgid "Search Quote"
-msgstr ""
+#: quotes-and-tips.php:381 quotes-and-tips.php:382
+msgid "Edit Quotes Category"
+msgstr "Idézet kategória szerkesztése"
 
-#: quotes-and-tips.php:228
-msgid "No quote found"
-msgstr "Idézet nem található"
+#: quotes-and-tips.php:383
+msgid "New Quotes Category"
+msgstr "Új Idézetek kategória"
 
-#: quotes-and-tips.php:229
-msgid "No quote found in Trash"
-msgstr "A lomtárban nem található idézet"
+#: quotes-and-tips.php:384 quotes-and-tips.php:385
+msgid "View Quotes Category"
+msgstr "Idézetek megtekintése kategória"
 
-#: quotes-and-tips.php:230
-msgid "Filter quotes list"
-msgstr ""
+#: quotes-and-tips.php:386
+msgid "Find Quotes Category"
+msgstr "Idézetek keresése kategória"
 
-#: quotes-and-tips.php:231
-msgid "Quotes list navigation"
-msgstr ""
+#: quotes-and-tips.php:387
+msgid "No Quotes Categories found"
+msgstr "Nem találtunk idézet kategóriákat"
 
-#: quotes-and-tips.php:232
-#, fuzzy
-msgid "Quotes list"
+#: quotes-and-tips.php:388
+msgid "No Quotes Categories found in Trash"
+msgstr "Nincs idézetek kategóriája a Trash-ban"
+
+#: quotes-and-tips.php:389
+msgid "Parent Quotes Category"
+msgstr "Szülői idézetek kategória"
+
+#: quotes-and-tips.php:390
+msgid "Quotes Categories list navigation"
+msgstr "Idézetek Kategóriák lista navigáció"
+
+#: quotes-and-tips.php:391
+msgid "Quotes Categories list"
+msgstr "Idézetek Kategóriák listája"
+
+#: quotes-and-tips.php:404 quotes-and-tips.php:405
+msgid "Quotes"
 msgstr "Idézetek"
 
-#: quotes-and-tips.php:399
+#: quotes-and-tips.php:415
+msgid "Add a New Quote"
+msgstr "Új árajánlat hozzáadása"
+
+#: quotes-and-tips.php:416
+msgid "Edit Quote"
+msgstr "Árajánlatkérés Szerkesztése"
+
+#: quotes-and-tips.php:417
+msgid "New Quote"
+msgstr "Új Ajánlat"
+
+#: quotes-and-tips.php:418
+msgid "View Quote"
+msgstr "Ajánlat megtekintése"
+
+#: quotes-and-tips.php:419
+msgid "Search Quote"
+msgstr "Ajánlat keresése"
+
+#: quotes-and-tips.php:420
+msgid "No quote found"
+msgstr "Nem találtak idézetet"
+
+#: quotes-and-tips.php:421
+msgid "No quote found in Trash"
+msgstr "Nincs idézet a Trash-ben"
+
+#: quotes-and-tips.php:422
+msgid "Filter quotes list"
+msgstr "Szűrő idézetek listája"
+
+#: quotes-and-tips.php:423
+msgid "Quotes list navigation"
+msgstr "Idézet lista navigáció"
+
+#: quotes-and-tips.php:424
+msgid "Quotes list"
+msgstr "Idézetek listája"
+
+#: quotes-and-tips.php:869
 msgid "Name:"
 msgstr "Név:"
 
-#: quotes-and-tips.php:403
+#: quotes-and-tips.php:873
 msgid "Official Position:"
-msgstr ""
+msgstr "Hivatalos álláspont:"
 
-#: quotes-and-tips.php:412
+#: quotes-and-tips.php:877
+msgid ""
+"Please fill in these fields to make the export/import function work "
+"correctly."
+msgstr ""
+"Kérjük, töltse ki ezeket a mezőket, hogy az export/import funkció "
+"megfelelően működjön."
+
+#: quotes-and-tips.php:887
 msgid "Name and Official Position"
-msgstr ""
+msgstr "Név és hivatalos beosztás"
 
-#: quotes-and-tips.php:435
+#: quotes-and-tips.php:927
 msgid "FAQ"
-msgstr "Gy.I.K."
+msgstr "GYIK"
 
-#: quotes-and-tips.php:436
+#: quotes-and-tips.php:928
 msgid "Support"
 msgstr "Támogatás"
 
-#: quotes-and-tips.php:620
+#: quotes-and-tips.php:1304
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
-#: quotes-and-tips.php:624
+#: quotes-and-tips.php:1308
 msgid "KB"
-msgstr ""
+msgstr "KB"
 
-#: quotes-and-tips.php:627
+#: quotes-and-tips.php:1311
 msgid "Bytes"
-msgstr ""
+msgstr "Bájt"
 
-#: quotes-and-tips.php:636
-#, fuzzy
+#: quotes-and-tips.php:1341
 msgid "Add Quotes and Tips block to your page or post"
-msgstr "Idézetek és ötletek hozzáadása a kereséshez"
+msgstr "Idézetek és tippek blokk hozzáadása az oldalához vagy posztjához"
 
-#: quotes-and-tips.php:640
-msgid "Display quotes and tips"
-msgstr ""
+#: quotes-and-tips.php:1345
+msgid "Quotes and Tips Block"
+msgstr "Idézetek és tippek blokk"
 
-#: quotes-and-tips.php:646
+#: quotes-and-tips.php:1353
 msgid "Display quotes"
-msgstr ""
+msgstr "Idézetek megjelenítése"
 
-#: quotes-and-tips.php:652
+#: quotes-and-tips.php:1357 quotes-and-tips.php:1376
+msgid "All categories"
+msgstr "Összes kategória"
+
+#: quotes-and-tips.php:1371
 msgid "Display tips"
-msgstr ""
+msgstr "Kijelző tippek"
 
-#~ msgid "Quotes from our clients"
-#~ msgstr "Idézetek ügyfeleinktől"
+#: quotes-and-tips.php:1391
+msgid "Display Quote"
+msgstr "Idézet megjelenítése"
 
-#~ msgid "Add a new tip"
-#~ msgstr "Új ötlet hozzáadása"
+#: quotes-and-tips.php:1405 quotes-and-tips.php:1434
+msgid "no title"
+msgstr "nincs cím"
 
-#~ msgid "Edit tips"
-#~ msgstr "Ötletek módosítása"
+#: quotes-and-tips.php:1420
+msgid "Display Tip"
+msgstr "Kijelző tipp"
 
-#~ msgid "New tip"
-#~ msgstr "Új ötlet"
+#: quotes-and-tips.php:1636 quotes-and-tips.php:1656
+msgid "Title"
+msgstr "Cím"
 
-#~ msgid "View tips"
-#~ msgstr "Ötletek átnézése"
+#: quotes-and-tips.php:1637 quotes-and-tips.php:1657 quotes-and-tips.php:1716
+msgid "Shortcode"
+msgstr "Rövid kód"
 
-#~ msgid "Search tips"
-#~ msgstr "Ötletek keresése"
+#: quotes-and-tips.php:1639 quotes-and-tips.php:1659
+msgid "Author"
+msgstr "Szerző"
 
-#~ msgid "Add a New quote"
-#~ msgstr "Új idézet hozzáadása"
+#: quotes-and-tips.php:1640 quotes-and-tips.php:1660
+msgid "Date"
+msgstr "Dátum"
 
-#~ msgid "Edit quote"
-#~ msgstr "Idézet javítása"
+#, php-format
+#~ msgid ""
+#~ "You need to make this files writable before you can save your changes. "
+#~ "See %s the Codex %s for more information."
+#~ msgstr ""
+#~ "Вам потрібно зробити цей файл доступним для запису, перед тим як ви "
+#~ "зможете зберегти свої зміни. Перегляньте %sКодекс%s для додаткової "
+#~ "інформації."
 
-#~ msgid "New quote"
-#~ msgstr "Új idézet"
+#~ msgid "Create your personal car rental/booking and reservation website."
+#~ msgstr "Створіть свій власний сайт прокату і резервування автомобілів."
 
-#~ msgid "View quote"
-#~ msgstr "Idézet megtekintése"
+#~ msgid "Add BWS Plugins Shortcode"
+#~ msgstr "Додати шорткод BWS плагіну"
 
-#~ msgid "Search quote"
-#~ msgstr "Idézet keresése"
+#~ msgid "Congratulations! %s license is activated successfully."
+#~ msgstr "Вітаємо! %s ліцензія успішно активована."
 
-#~ msgid "Official position:"
-#~ msgstr "Hivatalos beosztás:"
+#~ msgid "You will be automatically redirected to the %s in %s seconds."
+#~ msgstr "Вас буде автоматично перенаправлено на %s через %s секунд."
 
-#~ msgid "Name and Official position"
-#~ msgstr "Név és Hivatalos beosztás"
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually."
+#~ msgstr ""
+#~ "Помилка при завантаженні zip-архіву. Будь ласка, завантажте плагін вручну."
 
-#~ msgid "Settings saved"
-#~ msgstr "Beállítások mentve"
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually."
+#~ msgstr ""
+#~ "Помилка при відкритті zip-архіву. Будь ласка, завантажте плагін вручну."
 
-#~ msgid "All plugin settings were restored."
-#~ msgstr "Minden plugin paraméter visszaállítva."
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually."
+#~ msgstr ""
+#~ "Ваш сервер не підтримує формати Zip і Phar. Будь ласка, завантажте плагін "
+#~ "вручну."
 
-#~ msgid "Upload settings:"
-#~ msgstr "Beállítások feltöltése:"
+#~ msgid "UploadDir is not writable. Please, upload the plugin manually."
+#~ msgstr ""
+#~ "Немає доступу до теки завантажень WordPress. Будь ласка, завантажте "
+#~ "плагін вручну."
 
-#~ msgid "Random order with the page reload"
-#~ msgstr "Oldal újratöltéskor véletlenszerű sorrend"
+#~ msgid "Please, enter your license key"
+#~ msgstr "Будь ласка, введіть ваш ліцензійний ключ"
 
-#~ msgid "Random order without the page reload"
-#~ msgstr "Oldal újratöltése nélküli véletlenszerű sorrend"
+#~ msgid "You will be redirected automatically in 5 seconds."
+#~ msgstr "Вас буде перенаправлено автоматично через 5 секунд."
 
-#~ msgid "Reload time (in seconds)"
-#~ msgstr "Újratöltési idő (másodpercekben)"
+#~ msgid "Check premium options on the plugin settings page!"
+#~ msgstr "Подивіться преміум опції на сторінці налаштувань плагіна!"
 
-#~ msgid "Title options:"
-#~ msgstr "Cím beállítások:"
+#~ msgid ""
+#~ "Failed to download the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Помилка при завантаженні zip-архіву. Будь ласка, завантажте плагін вручну"
 
-#~ msgid "Get title from post"
-#~ msgstr "Cím a bejegyzésből"
+#~ msgid "Failed to open the zip archive. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Помилка при відкритті zip-архіву. Будь ласка, завантажте плагін вручну"
 
-#~ msgid "Get label of the block"
-#~ msgstr "Címke a blokkból"
+#~ msgid ""
+#~ "Your server does not support either ZipArchive or Phar. Please, upload "
+#~ "the plugin manually"
+#~ msgstr ""
+#~ "Ваш сервер не підтримує формати Zip і Phar. Будь ласка, завантажте плагін "
+#~ "вручну"
 
-#~ msgid "Tip label:"
-#~ msgstr "Ötlet címke:"
+#~ msgid "UploadDir is not writable. Please, upload the plugin manually"
+#~ msgstr ""
+#~ "Немає доступу до теки завантажень WordPress. Будь ласка, завантажте "
+#~ "плагін вручну"
 
-#~ msgid "Quote label:"
-#~ msgstr "Idézet címke:"
+#~ msgid "File %s edited successfully."
+#~ msgstr "Файл %s успішно відредаговано."
 
-#~ msgid "Additional settings"
-#~ msgstr "Kiegészítő beállítások"
+#~ msgid "Not enough permissions to create or update the file"
+#~ msgstr "У Вас недостатньо дозволів для створення або поновлення файлу"
 
-#~ msgid "Background Color:"
-#~ msgstr "Háttér szín:"
+#~ msgid "Not enough permissions to create the file"
+#~ msgstr "У Вас недостатньо дозволів для створення файлу"
 
-#~ msgid "Text Color:"
-#~ msgstr "Szöveg szín:"
+#~ msgid ""
+#~ "Add Google +1, Share, Follow, Hangout buttons and profile badge to "
+#~ "WordPress posts, pages and widgets."
+#~ msgstr ""
+#~ "Додавайте кнопки Google \"+1\", \"Поділитися\", \"Підписатися\", "
+#~ "\"Hangout\" і значок профілю до постів, сторінок та віджетів WordPress."
 
-#~ msgid "Background image:"
-#~ msgstr "Háttér kép:"
+#~ msgid "Installing Plugin"
+#~ msgstr "Встановлення плагіну"
 
-#~ msgid "Use background image"
-#~ msgstr "Háttér kép használata"
+#~ msgid "Downloading install package from"
+#~ msgstr "Завантаження встановлюючого пакунку з"
 
-#~ msgid "Choose an image from your computer:"
-#~ msgstr "Válasszon képet a számítógépéről:"
+#~ msgid "Unpacking the package"
+#~ msgstr "Розпакування пакета"
 
-#~ msgid "Current image:"
-#~ msgstr "Aktuális kép:"
+#~ msgid "The plugin %s is successfully installed."
+#~ msgstr "Плагін %s успішно встановлено."
 
-#~ msgid "Background image repeat:"
-#~ msgstr "Háttér kép ismétlés:"
+#~ msgid "Cancel"
+#~ msgstr "Відміна"
 
-#~ msgid "Horizontal repeat (x)"
-#~ msgstr "Vízszintes ismétlés (x)"
+#~ msgid "Deactivate"
+#~ msgstr "Деактивувати"
 
-#~ msgid "Vertical repeat (y)"
-#~ msgstr "Függőleges ismétlés (y)"
+#~ msgid "Add custom fields to WordPress website search results."
+#~ msgstr ""
+#~ "Додавайте користувацькі поля у результати пошуку вашого сайту WordPress."
 
-#~ msgid "Background image horizontal alignment:"
-#~ msgstr "Háttér kép vízszintes igazítás:"
+#~ msgid "Anonymous feedback"
+#~ msgstr "Анонімний відгук"
 
-#~ msgid "Background image vertical alignment:"
-#~ msgstr "Háttér kép függőleges igazítás:"
+#~ msgid ""
+#~ "Protect WordPress website forms from spam entries by means of math logic."
+#~ msgstr ""
+#~ "Захищайте форми вашого сайту WordPress від зламування шляхом математичної "
+#~ "логіки."
 
-#~ msgid "Add Quotes and Tips to the search"
-#~ msgstr "Idézetek és ötletek hozzáadása a kereséshez"
+#~ msgid "Congratulations! Pro Membership license is  activated successfully."
+#~ msgstr "Вітаємо! Pro Membership ліцензія успішно активована."
 
-#~ msgid "Using"
-#~ msgstr "Használva"
+#~ msgid "Email with system info is sent to"
+#~ msgstr "Емейл з системною інформацією надіслано на"
 
-#~ msgid "powered by"
-#~ msgstr "működteti a"
+#~ msgid "Browse Free WordPress Themes"
+#~ msgstr "Огляд безкоштовних WordPress тем"
 
-#~ msgid "Using Custom Search powered by"
-#~ msgstr "Az Egyéni Keresést működteti a"
+#~ msgid ""
+#~ "You can use one license of the Pro plugin for one domain only. Please "
+#~ "check and edit your license or domain if necessary using you personal "
+#~ "Client Area. We strongly recommend you to solve the problem within 24 "
+#~ "hours, otherwise the Pro plugin will be deactivated."
+#~ msgstr ""
+#~ "Ви можете використовувати одну ліцензію Про-плагіну для одного домену. "
+#~ "Будь ласка, переконайтесь, що інформацію щодо ліцензії і домену введено "
+#~ "вірно, у вкладці Client Area. Ми настійливо рекомендуємо Вам вирішити це "
+#~ "питання протягом 24 годин, інакше плагін буде деактивовано."
 
-#~ msgid "Activate Custom Search"
-#~ msgstr "Egyéni keresés aktiválása"
+#~ msgid "Insert"
+#~ msgstr "Вставити"
 
-#~ msgid "Download Custom Search"
-#~ msgstr "Egyéni keresés letöltése"
+#~ msgid ""
+#~ "Automatically add outgoing email messages to queue instead of sending "
+#~ "them immediately."
+#~ msgstr ""
+#~ "Автоматично формуйте чергу відправки вихідних електронних повідомлень. "
+#~ "Задавайте час і пріоритет розсилки."
 
-#~ msgid "Save Changes"
-#~ msgstr "Változások mentése"
+#~ msgid ""
+#~ "Add unlimited gallery categories. Organize images to make the navigation "
+#~ "through content easier."
+#~ msgstr ""
+#~ "Додавайте необмежену кількість категорій галерей. Групуйте зображення, "
+#~ "щоб спростити навігацію контентом."
 
-#~ msgid "Image Processing Error"
-#~ msgstr "Kép feldolgozási hiba"
+#~ msgid ""
+#~ "Attach, un-attach and re-attach media files quickly to WordPress posts "
+#~ "and pages."
+#~ msgstr ""
+#~ "Прикріплюйте, відкріплюйте і повторно прикріплюйте медіа файли до постів "
+#~ "і сторінок WordPress."
 
-#~ msgid "Image Upload Error"
-#~ msgstr "Kép feltöltési hiba"
+#~ msgid ""
+#~ "Add related posts to WordPress website posts or widgets. Link your "
+#~ "readers to relevant content."
+#~ msgstr ""
+#~ "Додавайте пов'язані публікації у пости або віджети сайту WordPress. "
+#~ "Надавайте своїм читачам контент схожої тематики."
+
+#~ msgid "Advertisement"
+#~ msgstr "Реклама"
+
+#~ msgid "Content & Media"
+#~ msgstr "Зміст та мультимедійні елементи"
+
+#~ msgid "Management"
+#~ msgstr "Управління"
+
+#~ msgid "Site Stats"
+#~ msgstr "Статистика сайту"
+
+#~ msgid "Social"
+#~ msgstr "Соціальні сервіси"
+
+#~ msgid "Utilities"
+#~ msgstr "Утиліти"
+
+#~ msgid ""
+#~ "Manage database and file system right from your WordPress admin dashboard."
+#~ msgstr ""
+#~ "Керуйте базою даних і файловою системою прямо з панелі адміністратора "
+#~ "WordPress."
+
+#~ msgid ""
+#~ "Add featured posts to WordPress website posts and widgets. Highlight "
+#~ "important information."
+#~ msgstr ""
+#~ "Додавайте обрані публікації до постів і віджетів сайту WordPress. "
+#~ "Підкреслюйте важливу інформацію."
+
+#~ msgid ""
+#~ "Add widgets Latest Posts or Latest Posts for Selected Categories to your "
+#~ "WordPress website."
+#~ msgstr ""
+#~ "Додавайте віджет найновішіх постів або найновішіх постів для обраних "
+#~ "категорій на сайт WordPress."
+
+#~ msgid ""
+#~ "Track views, comments and add the most popular posts to Wordpress widgets."
+#~ msgstr ""
+#~ "Відстежуйте перегляди, коментарі та додавайте найпопулярніші пости у "
+#~ "віджети сайту Wordpress."
+
+#~ msgid ""
+#~ "Add latest posts or latest posts for selected categories widgets to "
+#~ "WordPress website."
+#~ msgstr ""
+#~ "Додавайте віджет найновішіх постів або найновішіх постів для обраних "
+#~ "категорій на сайт WordPress."
+
+#~ msgid "Thank you for installing"
+#~ msgstr "Дякуємо, що встановили"
+
+#~ msgid "Thank you for choosing"
+#~ msgstr "Дякуємо, що обрали"
+
+#~ msgid "You will be automatically redirected to the %s in 7 seconds."
+#~ msgstr "Вас буде автоматично перенаправлено на %s через 7 секунд."
+
+#~ msgid "PHP Safe Mode"
+#~ msgstr "PHP Безпечний режим"
+
+#~ msgid "You license for"
+#~ msgstr "Ваша ліцензія для"
+
+#~ msgid "expires on"
+#~ msgstr "витікає"
+
+#~ msgid "This license key is bind to another site"
+#~ msgstr "Цей ліцензійний ключ прив'язано до іншого сайту"
+
+#~ msgid "Successfully installed the plugin"
+#~ msgstr "Успішно встановлено плагін"
+
+#~ msgid "Please, go to %s"
+#~ msgstr "Будь ласка, перейдіть на %s"
+
+#~ msgid "Trial"
+#~ msgstr "Триал"
+
+#~ msgid "If you enjoy our plugin, please give it 5 stars on WordPress"
+#~ msgstr ""
+#~ "Якщо вам сподобався плагін, будь ласка, поставте нам 5 зірочок на "
+#~ "WordPress"
+
+#~ msgid "If there is something wrong about it, please contact us"
+#~ msgstr "Якщо щось не так, будь ласка, повідомте нам"
+
+#~ msgid "Donations play an important role in supporting great projects"
+#~ msgstr "Пожертви грають важливу роль в підтримці проектів"
+
+#~ msgid "WordPress Version"
+#~ msgstr "Версія WordPress"
+
+#~ msgid "Activate Membership"
+#~ msgstr "Активувати Membership"
+
+#~ msgid "Don’t have valid license key yet?"
+#~ msgstr "Немає чинного ліцензійного ключа?"
+
+#~ msgid ""
+#~ "Join BestWebSoft Pro Membership today, cancel any time and use all "
+#~ "plugins on a single website %s for only %s per month."
+#~ msgstr ""
+#~ "Приєднуйтесь до BestWebSoft Pro Membership сьогодні, скасовуйте підписку "
+#~ "в будь-який час і використовуйте всі плагіни на одному сайті %s всього "
+#~ "лише за %s в місяць."
+
+#~ msgid "My Account"
+#~ msgstr "Мій аккаунт"
+
+#~ msgid "BWS Panel"
+#~ msgstr "BWS Панель"
+
+#~ msgid "panel"
+#~ msgstr "панель"
+
+#~ msgid "You can download and activate"
+#~ msgstr "Ви можете завантажити та активувати"
+
+#~ msgid "version of this plugin by entering Your license key."
+#~ msgstr "версію цього плагіну, якщо впишете ваш ліцензійний ключ."
+
+#~ msgid ""
+#~ "You can find your license key on your personal page Client area, by "
+#~ "clicking on the link"
+#~ msgstr ""
+#~ "Ви можете знайти ваш ліцензійний ключ на вашій персональній сторінці у "
+#~ "Client area, перейшовши за посиланням"
+
+#~ msgid "Configure Settings"
+#~ msgstr "Налаштувати плагін"
+
+#~ msgid "Go"
+#~ msgstr "Перейти"
+
+#~ msgid "DONATE"
+#~ msgstr "Підтримати нас"
+
+#~ msgid "Recommended plugins"
+#~ msgstr "Рекомендовані плагіни"
+
+#~ msgid "Install now"
+#~ msgstr "Встановити"
+
+#~ msgid "Try again"
+#~ msgstr "Спробувати ще раз"
+
+#~ msgid "Preview &#8220;%s&#8221;"
+#~ msgstr "Попередній перегляд &#8220;%s&#8221;"
+
+#~ msgid "Install %s"
+#~ msgstr "Встановити %s"
+
+#~ msgid "Update"
+#~ msgstr "Оновити"
+
+#~ msgid "Preview %s"
+#~ msgstr "Попередній перегляд %s"
+
+#~ msgid "Preview"
+#~ msgstr "Попередній перегляд"
+
+#~ msgid ""
+#~ "(your username is the email you specify when purchasing the product), "
+#~ "where you can make the necessary changes."
+#~ msgstr ""
+#~ "(ім'я користувача - це електронна адреса, яку ви вказуєте при купівлі "
+#~ "продукту), де ви можете внести потрібні зміни."
+
+#~ msgid "Activated plugins"
+#~ msgstr "Активовані плагіни"
+
+#~ msgid "Purchase"
+#~ msgstr "Купити"
+
+#~ msgid "Free plugins"
+#~ msgstr "Безкоштовні плагіни"
+
+#~ msgid "Install now from wordpress.org"
+#~ msgstr "Установити з wordpress.org"
 
 #, fuzzy
-#~ msgid "Quote"
-#~ msgstr "Idézetek"
+#~ msgid "Installed themes"
+#~ msgstr "Установлено %s"
 
-#~ msgid "Notice:"
-#~ msgstr "Megjegyzés:"
+#, fuzzy
+#~ msgid "Recommended themes"
+#~ msgstr "Рекомендовані до установки плагіни"
+
+#, fuzzy
+#~ msgid "installed"
+#~ msgstr "Установлено %s"
+
+#~ msgid "Login form"
+#~ msgstr "Форма логина"
+
+#~ msgid "Registration form"
+#~ msgstr "Форма регистрации"
+
+#~ msgid "Register form"
+#~ msgstr "Форма регистрации"
+
+#~ msgid "Reset Password form"
+#~ msgstr "Форма восстановления пароля"
+
+#~ msgid "Lost password form"
+#~ msgstr "Форма восстановления пароля"
+
+#~ msgid "Comments form"
+#~ msgstr "Форма комментариев"
+
+#~ msgid "Hide CAPTCHA for registered users"
+#~ msgstr "Не отображать для зарегистрированных пользователей"
+
+#~ msgid "Plus (&#43;)"
+#~ msgstr "Плюс (&#43;)"
+
+#~ msgid "Plus"
+#~ msgstr "Плюс (&#43;)"
+
+#~ msgid "Minus (&minus;)"
+#~ msgstr "Минус (&minus;)"
+
+#~ msgid "Minus"
+#~ msgstr "Минус (&minus;)"
+
+#~ msgid "Multiplication (&times;)"
+#~ msgstr "Умножение (&times;)"
+
+#~ msgid "Multiply"
+#~ msgstr "Умножить"
+
+#~ msgid "Numbers"
+#~ msgstr "Цифры"
+
+#~ msgid "Words"
+#~ msgstr "Слова"
+
+#~ msgid "Captcha"
+#~ msgstr "КАПЧА"
 
 #~ msgid ""
-#~ "The plugin's settings have been changed. In order to save them please "
-#~ "don't forget to click the 'Save Changes' button."
+#~ "Please select one item in the block Arithmetic and Complexity for CAPTCHA"
 #~ msgstr ""
-#~ "A plugin beállításai megváltoztak. A mentésükhöz ne felejtsen a "
-#~ "'Változások mentése' gombra kattintani."
+#~ "Пожалуйста, выберите 1 пункт из блока Арифметические дейтсвия и Сложность "
+#~ "для КАПЧИ"
+
+#~ msgid "Enable CAPTCHA for:"
+#~ msgstr "Отображать КАПЧУ для:"
+
+#~ msgid "Contact form"
+#~ msgstr "Контактная форма"
+
+#~ msgid "(powered by bestwebsoft.com)"
+#~ msgstr "(разработано компанией bestwebsoft.com)"
+
+#~ msgid "Activate contact form"
+#~ msgstr "Активировать контакную форму"
 
 #~ msgid ""
-#~ "If you would like to use this block, just copy and paste this shortcode "
-#~ "to your post or page"
+#~ "If you would like to customize this plugin for a custom form, please "
+#~ "contact us via"
 #~ msgstr ""
-#~ "Ha szeretné használni ezt a blokkot, másolja be ezt a shortcode-ot a "
-#~ "bejegyzésbe vagy oldalába"
+#~ "Если вы хотите кастомизировать плагин для кастомной формы, обращайтесь на"
+
+#~ msgid "Title for CAPTCHA in the form"
+#~ msgstr "Заголовок для КАПЧИ в форме"
+
+#~ msgid "Arithmetic actions for CAPTCHA"
+#~ msgstr "Арифметические действия для КАПЧИ"
+
+#~ msgid "CAPTCHA complexity level"
+#~ msgstr "Уровень сложности КАПЧИ"
+
+#~ msgid "ERROR"
+#~ msgstr "Ошибка"
+
+#~ msgid "Please fill the form."
+#~ msgstr "Пожалуйста, заполните КАПЧУ."
+
+#~ msgid "Please enter a valid CAPTCHA value."
+#~ msgstr "Пожалуйста, заполните КАПЧУ."
+
+#~ msgid "zero"
+#~ msgstr "ноль"
+
+#~ msgid "one"
+#~ msgstr "один"
+
+#~ msgid "three"
+#~ msgstr "три"
+
+#~ msgid "five"
+#~ msgstr "пять"
+
+#~ msgid "six"
+#~ msgstr "шесть"
+
+#~ msgid "seven"
+#~ msgstr "семь"
+
+#~ msgid "nine"
+#~ msgstr "девять"
+
+#~ msgid "eleven"
+#~ msgstr "одиннадцать"
+
+#~ msgid "twelve"
+#~ msgstr "двенадать"
+
+#~ msgid "thirteen"
+#~ msgstr "тринадцать"
+
+#~ msgid "fourteen"
+#~ msgstr "четырнадать"
+
+#~ msgid "fifteen"
+#~ msgstr "пятнадцать"
+
+#~ msgid "sixteen"
+#~ msgstr "шестнадцать"
+
+#~ msgid "seventeen"
+#~ msgstr "семнадцать"
+
+#~ msgid "eighteen"
+#~ msgstr "восемнадцать"
+
+#~ msgid "nineteen"
+#~ msgstr "девятнадцать"
+
+#~ msgid "ten"
+#~ msgstr "десять"
+
+#~ msgid "twenty"
+#~ msgstr "двадцать"
+
+#~ msgid "thirty"
+#~ msgstr "тридцать"
+
+#~ msgid "forty"
+#~ msgstr "сорок"
+
+#~ msgid "fifty"
+#~ msgstr "пятьдесят"
+
+#~ msgid "sixty"
+#~ msgstr "шестьдесят"
+
+#~ msgid "seventy"
+#~ msgstr "семьдесят"
+
+#~ msgid "eighty"
+#~ msgstr "восемьдесят"
+
+#~ msgid "ninety"
+#~ msgstr "девяносто"
+
+#~ msgid "and"
+#~ msgstr "и"
+
+#~ msgid "Encryption password is not set"
+#~ msgstr "Пароль для шифрования не установлен"
+
+#~ msgid "Decryption password is not set"
+#~ msgstr "Пароль для дешифровки не установлен"
+
+#~ msgid ""
+#~ "If you have any questions, please contact us via plugin@bestwebsoft.com "
+#~ "or fill in the contact form on our website"
+#~ msgstr ""
+#~ "Если у вас есть какие-то впросы, обращайтесь на plugin@bestwebsoft.com "
+#~ "или заполните контактную форму на нашем сайте"
+
+#~ msgid "The password of encryption is not set"
+#~ msgstr "Пароль для шифрования не установлен"
+
+#~ msgid "Increase"
+#~ msgstr "Умножить"
+
+#~ msgid "Difficulty for CAPTCHA"
+#~ msgstr "Уровень сложности КАПЧИ"
+
+#~ msgid "null"
+#~ msgstr "ноль"

@@ -2,379 +2,716 @@ msgid ""
 msgstr ""
 "Project-Id-Version: quotes_and_tips\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-11 12:55+0300\n"
-"PO-Revision-Date: 2018-06-11 12:55+0300\n"
+"POT-Creation-Date: 2025-01-21 15:18+0200\n"
+"PO-Revision-Date: 2025-01-21 15:19+0200\n"
 "Last-Translator: plugin@bestwebsoft.com <plugin@bestwebsoft.com>\n"
 "Language-Team: Arnold Montjoie <arnold@montjoie.de>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html__;esc_attr_e;esc_attr__\n"
 "X-Poedit-Basepath: ..\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: bws_menu\n"
 
-#: includes/class-qtsndtps-settings.php:24 quotes-and-tips.php:38
-#: quotes-and-tips.php:42 quotes-and-tips.php:433 quotes-and-tips.php:451
+#: includes/class-qtsndtps-settings.php:46 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:925 quotes-and-tips.php:950
 msgid "Settings"
 msgstr "Einstellungen"
 
-#: includes/class-qtsndtps-settings.php:25
-msgid "Appearance"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:26
-msgid "Misc"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:27
-msgid "Custom Code"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:45
-msgid "Left"
-msgstr "Links"
-
-#: includes/class-qtsndtps-settings.php:46
-#: includes/class-qtsndtps-settings.php:52
-msgid "Center"
-msgstr "Mitte"
-
 #: includes/class-qtsndtps-settings.php:47
-msgid "Right"
-msgstr "Rechts"
+msgid "Appearance"
+msgstr "Aussehen"
+
+#: includes/class-qtsndtps-settings.php:48
+msgid "Misc"
+msgstr "Verschiedenes"
+
+#: includes/class-qtsndtps-settings.php:49
+msgid "Custom Code"
+msgstr "Benutzerdefinierter Code"
+
+#: includes/class-qtsndtps-settings.php:50
+msgid "Import / Export"
+msgstr "Import / Export"
 
 #: includes/class-qtsndtps-settings.php:51
-msgid "Top"
-msgstr "Oben"
+msgid "License Key"
+msgstr "Lizenzschlüssel"
 
-#: includes/class-qtsndtps-settings.php:53
-msgid "Bottom"
-msgstr "Unten"
-
-#: includes/class-qtsndtps-settings.php:57
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:74
 msgid "None"
-msgstr ""
+msgstr "Nichts"
 
-#: includes/class-qtsndtps-settings.php:58
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:75
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
-#: includes/class-qtsndtps-settings.php:59
-#: includes/class-qtsndtps-settings.php:276
+#: includes/class-qtsndtps-settings.php:76
 msgid "Custom"
-msgstr ""
+msgstr "Benutzerdefiniert"
 
-#: includes/class-qtsndtps-settings.php:102
-msgid "There is no data about the uploaded file."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:104
-msgid "Image was not uploaded by HTTP POST. Possible file upload attack."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:106
-msgid "Wrong file format. The file should be png, jpg(jpeg) or gif."
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:108
-msgid "The file size should not exceed"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:116
-msgid "Could not create image directory."
-msgstr ""
+#: includes/class-qtsndtps-settings.php:114
+msgid "Sorry, your nonce did not verify."
+msgstr "Entschuldigung, Ihr Verifizierung ist ungültig."
 
 #: includes/class-qtsndtps-settings.php:120
+msgid "Error: Failed to upload the CSV file."
+msgstr "Fehler: Die CSV-Datei konnte nicht hochgeladen werden."
+
+#: includes/class-qtsndtps-settings.php:122
+msgid "Import completed."
+msgstr "Import abgeschlossen."
+
+#: includes/class-qtsndtps-settings.php:174
+msgid "There is no data about the uploaded file."
+msgstr "Es sind keine Daten über die hochgeladene Datei vorhanden."
+
+#: includes/class-qtsndtps-settings.php:176
+msgid "Image/video was not uploaded by HTTP POST. Possible file upload attack."
+msgstr ""
+"Bild/Video wurde nicht per HTTP POST hochgeladen. Möglicher Datei-Upload-"
+"Angriff."
+
+#: includes/class-qtsndtps-settings.php:178
+msgid ""
+"Wrong file format. The image should be png, jpg(jpeg) or gif, the video "
+"should be mp4, m4v, webm, ogv or flv"
+msgstr ""
+"Falsches Dateiformat. Das Bild sollte png, jpg(jpeg) oder gif sein, das "
+"Video sollte mp4, m4v, webm, ogv oder flv sein"
+
+#: includes/class-qtsndtps-settings.php:180
+msgid "The file size should not exceed"
+msgstr "Die Dateigröße sollte folgende Werte nicht überschreiten"
+
+#: includes/class-qtsndtps-settings.php:182
+msgid "Sorry, you are not allowed to upload this file type."
+msgstr "Sie dürfen diesen Dateityp leider nicht hochladen."
+
+#: includes/class-qtsndtps-settings.php:190
+msgid "Could not create image directory."
+msgstr "Das Bildverzeichnis konnte nicht erstellt werden."
+
+#: includes/class-qtsndtps-settings.php:195
 #, php-format
 msgid "The uploaded file could not be moved to %s."
 msgstr "Die hochgeladene Datei konnte nicht nach %s verschoben werden."
 
-#: includes/class-qtsndtps-settings.php:134
-msgid "Could not save background image file to WordPress media library."
+#: includes/class-qtsndtps-settings.php:211
+msgid "Could not save background image/video file to WordPress media library."
 msgstr ""
+"Hintergrundbild/Videodatei konnte nicht in der WordPress-Mediathek "
+"gespeichert werden."
 
-#: includes/class-qtsndtps-settings.php:165
+#: includes/class-qtsndtps-settings.php:302
 msgid "Settings saved."
-msgstr ""
+msgstr "Einstellungen gespeichert."
 
-#: includes/class-qtsndtps-settings.php:171 quotes-and-tips.php:38
-#: quotes-and-tips.php:42 quotes-and-tips.php:422
+#: includes/class-qtsndtps-settings.php:322 quotes-and-tips.php:45
+#: quotes-and-tips.php:49 quotes-and-tips.php:906
 msgid "Quotes and Tips Settings"
 msgstr "Einstellungen für Zitate und Tipps"
 
-#: includes/class-qtsndtps-settings.php:176
-msgid "Display Settings"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:327
+msgid "Random Change on"
+msgstr "Zufällige Änderung am"
 
-#: includes/class-qtsndtps-settings.php:179
-msgid "Random Order With the Page Reload"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:330
+msgid "Page reload"
+msgstr "Seite neu laden"
 
-#: includes/class-qtsndtps-settings.php:180
-msgid "Random Order Without the Page Reload"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:331
+msgid "Once a day"
+msgstr "Einmal am Tag"
 
-#: includes/class-qtsndtps-settings.php:181
-msgid "Change Frequency (in seconds)"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:332
+msgid "AJAX (no page reload)"
+msgstr "AJAX (kein Neuladen der Seite)"
 
-#: includes/class-qtsndtps-settings.php:186
+#: includes/class-qtsndtps-settings.php:336
+#: includes/class-qtsndtps-settings.php:591
+#: includes/class-qtsndtps-settings.php:638
+#: includes/class-qtsndtps-settings.php:680
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/class-qtsndtps-settings.php:338
+msgid "Button for changing quotes"
+msgstr "Schaltfläche zum Ändern von Zitaten"
+
+#: includes/class-qtsndtps-settings.php:349
+msgid "Change Frequency"
+msgstr "Frequenz ändern"
+
+#: includes/class-qtsndtps-settings.php:351
+msgid "sec"
+msgstr "sek"
+
+#: includes/class-qtsndtps-settings.php:355
 msgid "Title Options"
-msgstr ""
+msgstr "Titel Optionen"
 
-#: includes/class-qtsndtps-settings.php:189
+#: includes/class-qtsndtps-settings.php:358
 msgid "Set Title From Post"
-msgstr ""
+msgstr "Titel von Beitrag festlegen"
 
-#: includes/class-qtsndtps-settings.php:190
+#: includes/class-qtsndtps-settings.php:359
 msgid "Set Custom Titles"
-msgstr ""
+msgstr "Benutzerdefinierte Titel festlegen"
 
-#: includes/class-qtsndtps-settings.php:195
+#: includes/class-qtsndtps-settings.php:364
 msgid "Tip Title"
-msgstr ""
+msgstr "Tipp Titel"
 
-#: includes/class-qtsndtps-settings.php:201
+#: includes/class-qtsndtps-settings.php:370
 msgid "Quote Title"
-msgstr ""
+msgstr "Title"
 
-#: includes/class-qtsndtps-settings.php:207
+#: includes/class-qtsndtps-settings.php:376
 msgid "Add Quotes and Tips to the Search"
+msgstr "Zitate und Tipps zur Suche hinzufügen"
+
+#: includes/class-qtsndtps-settings.php:386
+#, php-format
+msgid "Go to %s Settings to include quotes and tips to your website search"
 msgstr ""
+"Gehen Sie zu %s Einstellungen, um Zitate und Tipps in Ihre Website-Suche "
+"aufzunehmen"
 
-#: includes/class-qtsndtps-settings.php:223 quotes-and-tips.php:213
-#: quotes-and-tips.php:214
-msgid "Quotes"
-msgstr "Zitate"
-
-#: includes/class-qtsndtps-settings.php:224
-msgid "Enable to include quotes to your website search using"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:227 quotes-and-tips.php:125
-#: quotes-and-tips.php:184 quotes-and-tips.php:185
-msgid "Tips"
-msgstr "Tipps"
-
-#: includes/class-qtsndtps-settings.php:228
-msgid "Enable to include tips to your website search using"
-msgstr ""
-
-#: includes/class-qtsndtps-settings.php:233
-#: includes/class-qtsndtps-settings.php:237
+#: includes/class-qtsndtps-settings.php:393
+#: includes/class-qtsndtps-settings.php:399
 msgid ""
 "Enable to include quotes and tips to your website search. Custom Search "
 "plugin is required."
 msgstr ""
+"Ermöglicht die Aufnahme von Zitaten und Tipps in die Suche auf Ihrer "
+"Website. Das Plugin Custom Search ist erforderlich."
 
-#: includes/class-qtsndtps-settings.php:233
+#: includes/class-qtsndtps-settings.php:393
 msgid "Activate Now"
-msgstr ""
+msgstr "Jetzt aktivieren"
 
-#: includes/class-qtsndtps-settings.php:237
+#: includes/class-qtsndtps-settings.php:399
+#: includes/class-qtsndtps-settings.php:426
 msgid "Install Now"
-msgstr ""
+msgstr "Jetzt installieren"
 
-#: includes/class-qtsndtps-settings.php:246
+#: includes/class-qtsndtps-settings.php:404
+msgid "Automatic Mailout when Publishing a New:"
+msgstr "Automatisches Mailing bei der Veröffentlichung einer neuen:"
+
+#: includes/class-qtsndtps-settings.php:413
+#, php-format
+msgid ""
+"Go to %s Settings to include quotes and tips to automatic mailout when "
+"publishing a new quotes and tips"
+msgstr ""
+"Gehen Sie zu %s Einstellungen, um Zitate und Tipps bei der Veröffentlichung "
+"neuer Zitate und Tipps in den automatischen Versand aufzunehmen"
+
+#: includes/class-qtsndtps-settings.php:420
+#: includes/class-qtsndtps-settings.php:426
+msgid ""
+"Enable to automatic mailout when publishing a new quotes and tips. Sender "
+"Pro plugin is required."
+msgstr ""
+"Aktivieren Sie den automatischen Mailversand bei der Veröffentlichung neuer "
+"Angebote und Tipps. Das Plugin Sender Pro ist erforderlich."
+
+#: includes/class-qtsndtps-settings.php:420
+msgid "Ativate Now"
+msgstr "Jetzt ativieren"
+
+#: includes/class-qtsndtps-settings.php:431
+msgid "Remove Quatation Marks"
+msgstr "Quatationsmarkierungen entfernen"
+
+#: includes/class-qtsndtps-settings.php:436
+msgid "Enable to remove quatation marks."
+msgstr "Aktivieren Sie diese Option, um Quatationsmarkierungen zu entfernen."
+
+#: includes/class-qtsndtps-settings.php:454
 msgid "Appearance Settings"
-msgstr ""
+msgstr "Darstellungseinstellungen"
 
-#: includes/class-qtsndtps-settings.php:251
-msgid "Use Default Styles"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:459
+msgid "Custom Styles"
+msgstr "Benutzerdefiniertes CSS"
 
-#: includes/class-qtsndtps-settings.php:257
+#: includes/class-qtsndtps-settings.php:463
+msgid "Enable to apply custom styles."
+msgstr "Aktivieren Sie die Anwendung benutzerdefinierter Stile."
+
+#: includes/class-qtsndtps-settings.php:470
 msgid "Background Color"
 msgstr "Hintergrundfarbe"
 
-#: includes/class-qtsndtps-settings.php:265
+#: includes/class-qtsndtps-settings.php:476
 msgid "Text Color"
 msgstr "Textfarbe"
 
-#: includes/class-qtsndtps-settings.php:273
-msgid "Background Image"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:482
+msgid "Title Text Size"
+msgstr "Titel Text Größe"
 
-#: includes/class-qtsndtps-settings.php:289
-msgid "Current Image"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:489
+msgid "Text Size"
+msgstr "Schriftgröße"
 
-#: includes/class-qtsndtps-settings.php:300
+#: includes/class-qtsndtps-settings.php:496
+msgid "Background Image/Video"
+msgstr "Hintergrundbild/Video"
+
+#: includes/class-qtsndtps-settings.php:515
+msgid ""
+"The image should be png, jpg(jpeg) or gif, the video should be mp4, m4v, "
+"webm, ogv or flv. The file size should not exceed"
+msgstr ""
+"Das Bild sollte im Format png, jpg (jpeg) oder gif sein, das Video im Format "
+"mp4, m4v, webm, ogv oder flv. Die Dateigröße sollte folgende Werte nicht "
+"überschreiten"
+
+#: includes/class-qtsndtps-settings.php:517
+msgid "Current Background"
+msgstr "Aktueller Hintergrund"
+
+#: includes/class-qtsndtps-settings.php:537
+msgid "Your browser does not support the video tag"
+msgstr "Ihr Browser unterstützt das Video-Tag nicht"
+
+#: includes/class-qtsndtps-settings.php:552
+msgid "Background Image Opacity"
+msgstr "Hintergrundbild Deckkraft"
+
+#: includes/class-qtsndtps-settings.php:559
 msgid "Background Image Repeat"
-msgstr ""
+msgstr "Hintergrundbild wiederholen"
 
-#: includes/class-qtsndtps-settings.php:303
+#: includes/class-qtsndtps-settings.php:562
 msgid "Horizontal Repeat (x)"
-msgstr ""
+msgstr "Horizontale Wiederholung (x)"
 
-#: includes/class-qtsndtps-settings.php:304
+#: includes/class-qtsndtps-settings.php:563
 msgid "Vertical Repeat (y)"
-msgstr ""
+msgstr "Vertikale Wiederholung (y)"
 
-#: includes/class-qtsndtps-settings.php:309
-msgid "Background Image Horizontal Alignment"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:564
+msgid "Cover"
+msgstr "Cover"
 
-#: includes/class-qtsndtps-settings.php:319
-msgid "Background Image Vertical Alignment"
-msgstr ""
+#: includes/class-qtsndtps-settings.php:569
+msgid "Background Image Alignment"
+msgstr "Ausrichtung von Hintergrundbildern"
 
-#: includes/class-qtsndtps-settings.php:340
+#: includes/class-qtsndtps-settings.php:595
+msgid "Author position"
+msgstr "Autorenposition"
+
+#: includes/class-qtsndtps-settings.php:598
+msgid "Left"
+msgstr "Links"
+
+#: includes/class-qtsndtps-settings.php:599
+msgid "Right"
+msgstr "Rechts"
+
+#: includes/class-qtsndtps-settings.php:612
+msgid "Border Radius"
+msgstr "Rahmen Radius"
+
+#: includes/class-qtsndtps-settings.php:619
+msgid "Box Shadow Size"
+msgstr "Box Shadow Größe"
+
+#: includes/class-qtsndtps-settings.php:622
+msgid "Offset x"
+msgstr "Versatz x"
+
+#: includes/class-qtsndtps-settings.php:623
+msgid "Offset y"
+msgstr "Versatz y"
+
+#: includes/class-qtsndtps-settings.php:624
+msgid "Blur radius"
+msgstr "Unschärferadius"
+
+#: includes/class-qtsndtps-settings.php:629
+msgid "Box Shadow Color"
+msgstr "Box Schatten Farbe"
+
+#: includes/class-qtsndtps-settings.php:642
+msgid "Block Size"
+msgstr "Blockgröße"
+
+#: includes/class-qtsndtps-settings.php:645
+msgid "Width"
+msgstr "Breite"
+
+#: includes/class-qtsndtps-settings.php:646
+msgid "Pay attention! In some themes this option may not work."
+msgstr ""
+"Bitte beachten Sie! Bei einigen Themes funktioniert diese Option "
+"möglicherweise nicht."
+
+#: includes/class-qtsndtps-settings.php:647
+msgid "Height"
+msgstr "Höhe"
+
+#: includes/class-qtsndtps-settings.php:660
+msgid "Button Text"
+msgstr "Button Text"
+
+#: includes/class-qtsndtps-settings.php:663
+msgid "If the ability to change quotes is enabled using the button."
+msgstr ""
+"Wenn die Möglichkeit, Zitate zu ändern, über die Schaltfläche aktiviert ist."
+
+#: includes/class-qtsndtps-settings.php:684
+msgid "Export to CSV"
+msgstr "Als CSV exportieren"
+
+#: includes/class-qtsndtps-settings.php:686
+msgid "Export Now"
+msgstr "Jetzt exportieren"
+
+#: includes/class-qtsndtps-settings.php:687
+msgid ""
+"Please fill in all fields in quote to make the export/import function work "
+"correctly."
+msgstr ""
+"Bitte füllen Sie alle Felder im Angebot aus, damit die Export/Import-"
+"Funktion korrekt funktioniert."
+
+#: includes/class-qtsndtps-settings.php:691
+msgid "Import to CSV"
+msgstr "In CSV importieren"
+
+#: includes/class-qtsndtps-settings.php:694
+msgid "Import Now"
+msgstr "Jetzt importieren"
+
+#: includes/class-qtsndtps-settings.php:714
 msgid "Quotes and Tips"
 msgstr "Zitate und Tipps"
 
-#: includes/class-qtsndtps-settings.php:343
+#: includes/class-qtsndtps-settings.php:717
 msgid ""
 "Add Quotes and Tips block to your page or post by using the following "
 "shortcode:"
 msgstr ""
+"Fügen Sie Ihrer Seite oder Ihrem Beitrag einen Block mit Zitaten und Tipps "
+"hinzu, indem Sie den folgenden Shortcode verwenden:"
 
-#: includes/class-qtsndtps-settings.php:345
-#, fuzzy
+#: includes/class-qtsndtps-settings.php:719
 msgid "Or add the following strings into the template source code"
 msgstr ""
-"Falls dieser Block benutzt werden soll, bitte folgende Zeichenkette in das "
-"aktuelle Template einfügen"
+"Oder fügen Sie die folgenden Zeichenfolgen in den Quellcode der Vorlage ein"
 
-#: quotes-and-tips.php:126
+#: quotes-and-tips.php:62 quotes-and-tips.php:69
+msgid "Upgrade to Pro"
+msgstr "Upgrade auf die Pro-Version"
+
+#: quotes-and-tips.php:218 quotes-and-tips.php:338 quotes-and-tips.php:339
+msgid "Tips"
+msgstr "Tipps"
+
+#: quotes-and-tips.php:219
 msgid "The quotes from our clients"
-msgstr ""
+msgstr "Die Zitate unserer Kunden"
 
-#: quotes-and-tips.php:194
+#: quotes-and-tips.php:233
+msgid "Next"
+msgstr "Weiter"
+
+#: quotes-and-tips.php:312 quotes-and-tips.php:1658
+msgid "Tips Categories"
+msgstr "Tipps Kategorien"
+
+#: quotes-and-tips.php:313
+msgid "Tips Category"
+msgstr "Kategorie Tipps"
+
+#: quotes-and-tips.php:314
+msgid "Add Tips Category"
+msgstr "Kategorie Tipps hinzufügen"
+
+#: quotes-and-tips.php:315
+msgid "Add New Tips Category"
+msgstr "Neue Kategorie Tipps hinzufügen"
+
+#: quotes-and-tips.php:316 quotes-and-tips.php:317
+msgid "Edit Tips Category"
+msgstr "Kategorie Tipps bearbeiten"
+
+#: quotes-and-tips.php:318
+msgid "New Tips Category"
+msgstr "Neue Kategorie Tipps"
+
+#: quotes-and-tips.php:319 quotes-and-tips.php:320
+msgid "View Tips Category"
+msgstr "Kategorie Tipps anzeigen"
+
+#: quotes-and-tips.php:321
+msgid "Find Tips Category"
+msgstr "Kategorie Tipps finden"
+
+#: quotes-and-tips.php:322
+msgid "No Tips Categories found"
+msgstr "Keine Tipps Kategorien gefunden"
+
+#: quotes-and-tips.php:323
+msgid "No Tips Categories found in Trash"
+msgstr "Keine Tipps Kategorien gefunden in Papierkorb"
+
+#: quotes-and-tips.php:324
+msgid "Parent Tips Category"
+msgstr "Kategorie Elterntipps"
+
+#: quotes-and-tips.php:325
+msgid "Tips Categories list navigation"
+msgstr "Tipps Kategorien Listennavigation"
+
+#: quotes-and-tips.php:326
+msgid "Tips Categories list"
+msgstr "Tipps Kategorienliste"
+
+#: quotes-and-tips.php:349
 msgid "Add a New Tip"
-msgstr ""
+msgstr "Einen neuen Tipp hinzufügen"
 
-#: quotes-and-tips.php:195
+#: quotes-and-tips.php:350
 msgid "Edit Tip"
-msgstr ""
+msgstr "Tipp bearbeiten"
 
-#: quotes-and-tips.php:196
+#: quotes-and-tips.php:351
 msgid "New Tip"
-msgstr ""
+msgstr "Neuer Tipp"
 
-#: quotes-and-tips.php:197
+#: quotes-and-tips.php:352
 msgid "View Tip"
-msgstr ""
+msgstr "Tipp ansehen"
 
-#: quotes-and-tips.php:198
+#: quotes-and-tips.php:353
 msgid "Search Tip"
-msgstr ""
+msgstr "Suche Tipp"
 
-#: quotes-and-tips.php:199
+#: quotes-and-tips.php:354
 msgid "No tips found"
 msgstr "Keine Tipps gefunden"
 
-#: quotes-and-tips.php:200
+#: quotes-and-tips.php:355
 msgid "No tips found in Trash"
 msgstr "Keine Tipps im Papiekorb gefunden"
 
-#: quotes-and-tips.php:201
+#: quotes-and-tips.php:356
 msgid "Filter tips list"
-msgstr ""
+msgstr "Liste der Filtertipps"
 
-#: quotes-and-tips.php:202
+#: quotes-and-tips.php:357
 msgid "Tips list navigation"
-msgstr ""
+msgstr "Navigation in der Tippsliste"
 
-#: quotes-and-tips.php:203
-#, fuzzy
+#: quotes-and-tips.php:358
 msgid "Tips list"
-msgstr "Tipps"
+msgstr "Lista e ideve"
 
-#: quotes-and-tips.php:223
+#: quotes-and-tips.php:377 quotes-and-tips.php:1638
+msgid "Quotes Categories"
+msgstr "Zitate Kategorien"
+
+#: quotes-and-tips.php:378
+msgid "Quotes Category"
+msgstr "Kategorie Zitate"
+
+#: quotes-and-tips.php:379
+msgid "Add Quotes Category"
+msgstr "Kategorie Zitate hinzufügen"
+
+#: quotes-and-tips.php:380
+msgid "Add New Quotes Category"
+msgstr "Neue Kategorie \"Zitate\" hinzufügen"
+
+#: quotes-and-tips.php:381 quotes-and-tips.php:382
+msgid "Edit Quotes Category"
+msgstr "Kategorie Zitate bearbeiten"
+
+#: quotes-and-tips.php:383
+msgid "New Quotes Category"
+msgstr "Kategorie \"Neue Zitate"
+
+#: quotes-and-tips.php:384 quotes-and-tips.php:385
+msgid "View Quotes Category"
+msgstr "Kategorie Zitate anzeigen"
+
+#: quotes-and-tips.php:386
+msgid "Find Quotes Category"
+msgstr "Kategorie Zitate finden"
+
+#: quotes-and-tips.php:387
+msgid "No Quotes Categories found"
+msgstr "Keine Zitate Kategorien gefunden"
+
+#: quotes-and-tips.php:388
+msgid "No Quotes Categories found in Trash"
+msgstr "Keine Zitate Kategorien gefunden in Trash"
+
+#: quotes-and-tips.php:389
+msgid "Parent Quotes Category"
+msgstr "Kategorie Zitate der Eltern"
+
+#: quotes-and-tips.php:390
+msgid "Quotes Categories list navigation"
+msgstr "Zitate Kategorien Liste Navigation"
+
+#: quotes-and-tips.php:391
+msgid "Quotes Categories list"
+msgstr "Zitate Kategorien Liste"
+
+#: quotes-and-tips.php:404 quotes-and-tips.php:405
+msgid "Quotes"
+msgstr "Zitate"
+
+#: quotes-and-tips.php:415
 msgid "Add a New Quote"
-msgstr ""
+msgstr "Ein neues Angebot hinzufügen"
 
-#: quotes-and-tips.php:224
+#: quotes-and-tips.php:416
 msgid "Edit Quote"
-msgstr ""
+msgstr "Angebot bearbeiten"
 
-#: quotes-and-tips.php:225
+#: quotes-and-tips.php:417
 msgid "New Quote"
-msgstr ""
+msgstr "Neues Zitat"
 
-#: quotes-and-tips.php:226
+#: quotes-and-tips.php:418
 msgid "View Quote"
-msgstr ""
+msgstr "Angebot ansehen"
 
-#: quotes-and-tips.php:227
+#: quotes-and-tips.php:419
 msgid "Search Quote"
-msgstr ""
+msgstr "Angebot suchen"
 
-#: quotes-and-tips.php:228
+#: quotes-and-tips.php:420
 msgid "No quote found"
 msgstr "Kein Zitat gefunden"
 
-#: quotes-and-tips.php:229
+#: quotes-and-tips.php:421
 msgid "No quote found in Trash"
 msgstr "Kein Zitat im Papierkorb gefunden"
 
-#: quotes-and-tips.php:230
+#: quotes-and-tips.php:422
 msgid "Filter quotes list"
-msgstr ""
+msgstr "Liste der Zitate filtern"
 
-#: quotes-and-tips.php:231
+#: quotes-and-tips.php:423
 msgid "Quotes list navigation"
-msgstr ""
+msgstr "Angebotsliste Navigation"
 
-#: quotes-and-tips.php:232
-#, fuzzy
+#: quotes-and-tips.php:424
 msgid "Quotes list"
-msgstr "Zitate"
+msgstr "Angebotsliste"
 
-#: quotes-and-tips.php:399
+#: quotes-and-tips.php:869
 msgid "Name:"
 msgstr "Name:"
 
-#: quotes-and-tips.php:403
+#: quotes-and-tips.php:873
 msgid "Official Position:"
-msgstr ""
+msgstr "Offizielle Position:"
 
-#: quotes-and-tips.php:412
+#: quotes-and-tips.php:877
+msgid ""
+"Please fill in these fields to make the export/import function work "
+"correctly."
+msgstr ""
+"Bitte füllen Sie diese Felder aus, damit die Export/Import-Funktion korrekt "
+"funktioniert."
+
+#: quotes-and-tips.php:887
 msgid "Name and Official Position"
-msgstr ""
+msgstr "Name und Dienststellung"
 
-#: quotes-and-tips.php:435
+#: quotes-and-tips.php:927
 msgid "FAQ"
 msgstr "FAQ (häufig gestelle Fragen)"
 
-#: quotes-and-tips.php:436
+#: quotes-and-tips.php:928
 msgid "Support"
 msgstr "Unterstützung"
 
-#: quotes-and-tips.php:620
+#: quotes-and-tips.php:1304
 msgid "MB"
-msgstr ""
+msgstr "MB"
 
-#: quotes-and-tips.php:624
+#: quotes-and-tips.php:1308
 msgid "KB"
-msgstr ""
+msgstr "KB"
 
-#: quotes-and-tips.php:627
+#: quotes-and-tips.php:1311
 msgid "Bytes"
-msgstr ""
+msgstr "Bytes"
 
-#: quotes-and-tips.php:636
-#, fuzzy
+#: quotes-and-tips.php:1341
 msgid "Add Quotes and Tips block to your page or post"
-msgstr "Einstellungen für Zitate und Tipps"
-
-#: quotes-and-tips.php:640
-msgid "Display quotes and tips"
 msgstr ""
+"Block \"Zitate und Tipps\" zu Ihrer Seite oder Ihrem Beitrag hinzufügen"
 
-#: quotes-and-tips.php:646
+#: quotes-and-tips.php:1345
+msgid "Quotes and Tips Block"
+msgstr "Zitate und Tipps Block"
+
+#: quotes-and-tips.php:1353
 msgid "Display quotes"
-msgstr ""
+msgstr "Mit Anführungszeichen"
 
-#: quotes-and-tips.php:652
+#: quotes-and-tips.php:1357 quotes-and-tips.php:1376
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+#: quotes-and-tips.php:1371
 msgid "Display tips"
-msgstr ""
+msgstr "Tipps anzeigen"
+
+#: quotes-and-tips.php:1391
+msgid "Display Quote"
+msgstr "Angebot anzeigen"
+
+#: quotes-and-tips.php:1405 quotes-and-tips.php:1434
+msgid "no title"
+msgstr "Kein Titel"
+
+#: quotes-and-tips.php:1420
+msgid "Display Tip"
+msgstr "Anzeige Tipp"
+
+#: quotes-and-tips.php:1636 quotes-and-tips.php:1656
+msgid "Title"
+msgstr "Titel"
+
+#: quotes-and-tips.php:1637 quotes-and-tips.php:1657 quotes-and-tips.php:1716
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: quotes-and-tips.php:1639 quotes-and-tips.php:1659
+msgid "Author"
+msgstr "Autor"
+
+#: quotes-and-tips.php:1640 quotes-and-tips.php:1660
+msgid "Date"
+msgstr "Datum"
+
+#~ msgid "Center"
+#~ msgstr "Mitte"
+
+#~ msgid "Top"
+#~ msgstr "Oben"
+
+#~ msgid "Bottom"
+#~ msgstr "Unten"
 
 #, fuzzy
 #~ msgid "Add Quotes and Tips block to your page or post:"
@@ -414,17 +751,11 @@ msgstr ""
 #~ msgid "Additional settings"
 #~ msgstr "zusätzliche Einstellungen"
 
-#~ msgid "Background image"
-#~ msgstr "Hintergrundbild"
-
 #~ msgid "Use background image"
 #~ msgstr "Benutze Hintergrundbild"
 
 #~ msgid "Choose an image from your computer:"
 #~ msgstr "Wähle ein Bild von deinem Computer:"
-
-#~ msgid "Current image"
-#~ msgstr "Aktuelles Bild"
 
 #~ msgid "Horizontal repeat (x)"
 #~ msgstr "Horizontal wiederholen (х)"
@@ -434,9 +765,6 @@ msgstr ""
 
 #~ msgid "Background image horizontal alignment"
 #~ msgstr "Hintergrundbild"
-
-#~ msgid "Background image vertical alignment"
-#~ msgstr "Vertikale Ausrichtung des Hintergrundbildes"
 
 #~ msgid "Quotes from our clients"
 #~ msgstr "Zitate unserer Kunden"
@@ -456,17 +784,8 @@ msgstr ""
 #~ msgid "Search tips"
 #~ msgstr "Tipps suchen"
 
-#~ msgid "Add a New quote"
-#~ msgstr "Ein neues Zitat erstellen"
-
-#~ msgid "Edit quote"
-#~ msgstr "Zitat bearbeiten"
-
 #~ msgid "New quote"
 #~ msgstr "Neues Zitat"
-
-#~ msgid "View quote"
-#~ msgstr "Zitat ansehen"
 
 #~ msgid "Search quote"
 #~ msgstr "Zitat suchen"
@@ -503,9 +822,6 @@ msgstr ""
 
 #~ msgid "Current image:"
 #~ msgstr "Aktuelles Bild:"
-
-#~ msgid "Background image repeat:"
-#~ msgstr "Hintergrundbild wiederholen:"
 
 #~ msgid "Background image horizontal alignment:"
 #~ msgstr "Hintergrundbild "

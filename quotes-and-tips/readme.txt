@@ -3,8 +3,8 @@ Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
 Tags: add quotes, create quotes, display quotes, publish quotes, quote label, quotes from clients, quotes and tips, quotes and tips plugin, tip, tip label, tips for visitors, additional info
 Requires at least: 5.6
-Tested up to: 6.6
-Stable tag: 1.45
+Tested up to: 6.7
+Stable tag: 1.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -20,7 +20,7 @@ Display useful and featured content for your visitors today!
 
 http://www.youtube.com/watch?v=kSR0mERfxBI
 
-= Features =
+= Free Features =
 
 * Add unlimited number of quotes including:
 	* Author name
@@ -58,6 +58,19 @@ http://www.youtube.com/watch?v=kSR0mERfxBI
 * Incredibly simple settings for fast setup without modifying code
 * Detailed step-by-step documentation and videos
 * Multilingual and RTL ready
+
+> **Pro Features**
+>
+> All features from Free version included plus:
+>
+> * Ability to Resize quotation block
+> * Ability to import/export
+> * Ability to change Author position
+> * Ability to use Button for changing quotes
+> * Ability to use Gutenberg block
+> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
+>
+> [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/quotes-and-tips/?k=6cc239b8b3f5357ca53ad8ce19bf4c2d)
 
 If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
@@ -148,12 +161,22 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 
 == Changelog ==
 
+= V1.46 - 21.01.25 =
+* PRO : Ability to Resize quotation block has been added.
+* PRO : Ability to import/export has been added.
+* PRO : Ability to change Author position has been added.
+* PRO : Ability to use Button for changing quotes has been added.
+* PRO : Ability to use Gutenberg block has been added.
+* Update : We updated functionality for WordPress 6.7.1
+* Bugfix : Small bugs fixed.
+* Update : BWS plugins section is updated.
+
 = V1.45 - 22.04.24 =
-* Update : We updated functionality for WordPress 6.5.
+* Update : We updated functionality for WordPress 6.2.
 * Bugfix : Small bugs fixed.
 
 = V1.44 - 18.07.23 =
-* NEW : Ability to remove quatation marks has been added.
+* NEW : Ability to remove quotation marks has been added.
 * NEW : Ability to add video background has been added.
 * NEW : Ability to choose specific quote or tip by shortcode has been added.
 * NEW : Ability to update quotes and tips daily has been added.
@@ -334,6 +357,12 @@ Please make sure that the problem hasn't been discussed yet on our forum (<https
 * NEW : The Russian language file is added to the plugin.
 
 == Upgrade Notice ==
+
+= V1.46 =
+* New features added.
+* Bug fixed.
+* The compatibility with new WordPress version updated. 
+* Plugin optimization completed.
 
 = V1.44 =
 * New features added.
