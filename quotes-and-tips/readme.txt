@@ -1,117 +1,109 @@
 ﻿=== Quotes and Tips by BestWebSoft ===
 Contributors: bestwebsoft
 Donate link: https://bestwebsoft.com/donate/
-Tags: add quotes, create quotes, display quotes, publish quotes, quote label, quotes from clients, quotes and tips, quotes and tips plugin, tip, tip label, tips for visitors, additional info
+Tags: add quotes, create quotes, display quotes, publish quotes, quote label
 Requires at least: 5.6
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.46
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Add customizable quotes and tips blocks to WordPress posts, pages and widgets.
+Add quotes and tips to posts, pages, and widgets. Customize design, rotation, and display using shortcodes or blocks.
 
 == Description ==
 
-Quotes and Tips plugin is a simple solution to add useful content on your WordPress website. Customize the appearance, configure settings, and paste quotes and tips wherever you like.
+**Quotes and Tips** is a lightweight and flexible WordPress plugin that allows you to **add, customize, and display quotes and tips** anywhere on your site — posts, pages, widgets, or template files.
 
-Display useful and featured content for your visitors today!
+Easily share motivational quotes, helpful tips, testimonials, or custom messages with your audience using a stylish, customizable block. Choose backgrounds, manage content, enable auto-rotation, and much more — no coding needed.
 
-[View Demo](https://bestwebsoft.com/demo-quotes-and-tips/?ref=readme)
+Start engaging your visitors today with useful and inspirational content!
 
-http://www.youtube.com/watch?v=kSR0mERfxBI
+[View Demo](https://bestwebsoft.com/demo-quotes-and-tips/?ref=readme)  
+[Watch Overview Video](http://www.youtube.com/watch?v=kSR0mERfxBI)
 
 = Free Features =
 
-* Add unlimited number of quotes including:
-	* Author name
-	* Official position
-* Edit quotes and tips using TinyMCE editor
-* Add quotes and tips using shortcode to:
-	* Posts
-	* Pages
-	* Widgets
-* Set random rotation:
-	* With page reload
-	* Without page reload
-* Set automatic reload time
-* Change background and text color
-* Change custom background:
-	* Image
-	* Video [NEW]
-* Set background image repeat:
-	* Horizontal
-	* Vertical
-* Choose background image alignment:
-	* Horizontal
-		* Left
-		* Center
-		* Right
-	* Vertical
-		* Top
-		* Center
-		* Bottom
-* Add quotes and tips to search results with [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=02f29128229d89fbd99d8251200ff455)
-* Enable automatic mailout when publishing a new Quotes and Tips [Sender](https://bestwebsoft.com/products/wordpress/plugins/sender/?k=9e068dce9989e5146fafbf42ee471f54)
-* Add or remove Quatation Marks
-* Add custom code via plugin settings page
-* Compatible with latest WordPress version
-* Incredibly simple settings for fast setup without modifying code
-* Detailed step-by-step documentation and videos
-* Multilingual and RTL ready
+* Add unlimited quotes and tips:
+  * Include author name and official position
+* Create content using the **TinyMCE editor**
+* Insert quotes and tips using shortcode into:
+  * Posts
+  * Pages
+  * Widgets
+* Display random quotes:
+  * On page reload
+  * Dynamically without reload
+* Set **automatic rotation interval**
+* Customize appearance:
+  * Background and text colors
+  * Background image or **video background** [NEW]
+  * Image repeat: horizontal or vertical
+  * Image alignment (left/center/right, top/center/bottom)
+* Include quotes in search results using [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=02f29128229d89fbd99d8251200ff455)
+* Enable email notifications for new quotes/tips using [Sender plugin](https://bestwebsoft.com/products/wordpress/plugins/sender/?k=9e068dce9989e5146fafbf42ee471f54)
+* Add or remove **quotation marks**
+* Insert custom code via plugin settings
+* Easy to use — no coding required
+* Fully compatible with the latest WordPress version
+* RTL and multilingual ready
+* Clean and responsive layout
+* Includes step-by-step documentation and videos
 
 > **Pro Features**
 >
-> All features from Free version included plus:
+> All Free features included, plus:
 >
-> * Ability to Resize quotation block
-> * Ability to import/export
-> * Ability to change Author position
-> * Ability to use Button for changing quotes
-> * Ability to use Gutenberg block
-> * Get answer to your support question within one business day ([Support Policy](https://bestwebsoft.com/support-policy/))
+> * Resize the quotes block
+> * Import/export quotes and tips
+> * Edit author position style
+> * Add a **button to switch quotes**
+> * Gutenberg block support
+> * Priority support — response within 1 business day ([Support Policy](https://bestwebsoft.com/support-policy/))
 >
 > [Upgrade to Pro Now](https://bestwebsoft.com/products/wordpress/plugins/quotes-and-tips/?k=6cc239b8b3f5357ca53ad8ce19bf4c2d)
 
-If you have a feature suggestion or idea you'd like to see in the plugin, we'd love to hear about it! [Suggest a Feature](https://support.bestwebsoft.com/hc/en-us/requests/new)
+Have an idea or feature request? [Let us know!](https://support.bestwebsoft.com/hc/en-us/requests/new)
 
 = Documentation & Videos =
 
-* [[Doc] User Guide](https://bestwebsoft.com/documentation/quotes-and-tips/quotes-and-tips-user-guide/)
-* [[Doc] Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
-* [[Video] Installation Instruction](https://www.youtube.com/watch?v=tEOjkZrwdNA)
+* [User Guide](https://bestwebsoft.com/documentation/quotes-and-tips/quotes-and-tips-user-guide/)
+* [Installation Instructions](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
+* [Video Tutorial](https://www.youtube.com/watch?v=tEOjkZrwdNA)
 
 = Help & Support =
 
-Visit our Help Center if you have any questions, our friendly Support Team is happy to help — <https://support.bestwebsoft.com/>
+Need help? Visit our [Help Center](https://support.bestwebsoft.com/) — our team is here to assist you.
 
 = Affiliate Program =
 
-Earn 20% commission by selling the premium WordPress plugins and themes by BestWebSoft — https://bestwebsoft.com/affiliate/
+Earn 20% commission by promoting BestWebSoft plugins and themes.  
+Join here: https://bestwebsoft.com/affiliate/
 
 = Translation =
 
-* German (de_DE) (thanks to [Arnold Montjoie](mailto:arnold@montjoie.de))
-* Hebrew (he_IL) (thanks to Sagive SEO)
-* Hungarian (hu_HU) (thanks to [Peter Aprily](mailto:solarside09@gmail.com) www.aprily.com)
-* Russian (ru_RU)
+* German (de_DE) — thanks to Arnold Montjoie  
+* Hebrew (he_IL) — thanks to Sagive SEO  
+* Hungarian (hu_HU) — thanks to Peter Aprily ([www.aprily.com](http://www.aprily.com))  
+* Russian (ru_RU)  
 * Ukrainian (uk)
 
-Some of these translations are not complete. We are constantly adding new features which should be translated. If you would like to create your own language pack or update the existing one, you can send [the text of PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [BestWebSoft](https://support.bestwebsoft.com/hc/en-us/requests/new) and we'll add it to the plugin. You can download the latest version of the program for work with PO and MO [files Poedit](http://www.poedit.net/download.php).
+Want to help improve translations or add a new one?  
+Send us your PO and MO files via [this form](https://support.bestwebsoft.com/hc/en-us/requests/new).  
+Get [Poedit](http://www.poedit.net/download.php) to get started.
 
 = Recommended Plugins =
 
-* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=e8f05fa90cedfd3a96483e8f0ca60ab5) - Automatically check and update WordPress website core with all installed plugins and themes to the latest versions.
-* [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=02f29128229d89fbd99d8251200ff455) - Add custom post types and taxonomies to WordPress website search results.
+* [Updater](https://bestwebsoft.com/products/wordpress/plugins/updater/?k=e8f05fa90cedfd3a96483e8f0ca60ab5) – Automatically update WordPress core, themes, and plugins.
+* [Custom Search](https://bestwebsoft.com/products/wordpress/plugins/custom-search/?k=02f29128229d89fbd99d8251200ff455) – Add custom post types and taxonomies to search results.
 
 == Installation ==
 
-1. Upload the folder `quotes-and-tips` to the directory `/wp-content/plugins/`.
-2. Activate the plugin via the 'Plugins' menu in WordPress.
-3. The site settings are available in 'Quotes'->'Settings' or 'Tips'->'Settings'.
+1. Upload the `quotes-and-tips` folder to `/wp-content/plugins/`
+2. Activate the plugin via the "Plugins" menu in WordPress
+3. Go to `Quotes -> Settings` or `Tips -> Settings` to configure
 
-[View a PDF version of Step-by-step Instruction on Quotes and Tips Installation](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)
-
-http://www.youtube.com/watch?v=tEOjkZrwdNA
+[PDF: Installation Guide](https://bestwebsoft.com/documentation/how-to-install-a-wordpress-product/how-to-install-a-wordpress-plugin/)  
+[Video: Setup Tutorial](http://www.youtube.com/watch?v=tEOjkZrwdNA)
 
 == Frequently Asked Questions ==
 
