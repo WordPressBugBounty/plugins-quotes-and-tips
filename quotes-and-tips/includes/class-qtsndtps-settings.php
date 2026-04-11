@@ -356,7 +356,8 @@ if ( ! class_exists( 'Qtsndtps_Settings_Tabs' ) ) {
 					<td>
 						<fieldset>
 							<label><input type="radio" name="qtsndtps_title_post" value="1" class="qtsndtps_title_post"<?php checked( $this->options['title_post'] ); ?> /> <?php esc_html_e( 'Set Title From Post', 'quotes-and-tips' ); ?></label><br />
-							<label><input type="radio" name="qtsndtps_title_post" value="0" class="qtsndtps_title_post"<?php checked( '0', $this->options['title_post'] ); ?> /> <?php esc_html_e( 'Set Custom Titles', 'quotes-and-tips' ); ?></label>
+							<label><input type="radio" name="qtsndtps_title_post" value="0" class="qtsndtps_title_post"<?php checked( '0', $this->options['title_post'] ); ?> /> <?php esc_html_e( 'Set Custom Titles', 'quotes-and-tips' ); ?></label><br />
+							<label><input type="radio" name="qtsndtps_title_post" value="-1" class="qtsndtps_title_post"<?php checked( '-1', $this->options['title_post'] ); ?> /> <?php esc_html_e( 'Do not show titles', 'quotes-and-tips' ); ?></label>
 						</fieldset>
 					</td>
 				</tr>

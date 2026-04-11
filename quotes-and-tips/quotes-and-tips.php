@@ -6,7 +6,7 @@ Description: Add customizable quotes and tips blocks to WordPress posts, pages a
 Author: BestWebSoft
 Text Domain: quotes-and-tips
 Domain Path: /languages
-Version: 1.46
+Version: 1.47
 Author URI: https://bestwebsoft.com/
 License: GPLv2 or later
  */
@@ -118,7 +118,6 @@ if ( ! function_exists( 'qtsndtps_plugin_init' ) ) {
 
 		qtsndtps_register_tips_post_type();
 		qtsndtps_register_quote_post_type();
-		qtsndtps_csv_download();
 	}
 }
 
@@ -600,148 +599,6 @@ if ( ! function_exists( 'qtsndtps_create_tip_quote_block' ) ) {
 	}
 }
 
-if ( ! function_exists( 'qtsndtps_csv_download' ) ) {
-	/**
-	 * Download SCV with tips and quotes
-	 */
-	function qtsndtps_csv_download() {
-		global $wpdb, $wp_filesystem;
-		if ( isset( $_POST['qtsndtps_export_submit'] ) && check_admin_referer( 'qtsndtps_export_action', 'qtsndtps_export_field' ) ) {
-			if ( ! function_exists( 'WP_Filesystem' ) ) {
-				/* Include necessary file for WordPress Filesystem API */
-				include_once ABSPATH . 'wp-admin/includes/file.php';
-			}
-
-			/* Initialize the WordPress filesystem. */
-			WP_Filesystem();
-
-			$quotes_query = "SELECT p.post_title, p.post_content, pm.meta_value AS 'name_field', pm1.meta_value AS 'off_cap'
-							FROM {$wpdb->posts} p
-							LEFT JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id
-							LEFT JOIN {$wpdb->postmeta} pm1 ON p.ID = pm1.post_id
-							WHERE p.post_type = 'quote' AND p.post_status = 'publish'
-							AND pm.meta_key = 'name_field'
-							AND pm1.meta_key = 'off_cap'";
-			$tips_query = "SELECT p.post_title, p.post_content
-							FROM {$wpdb->posts} p
-							WHERE p.post_type = 'tips' AND p.post_status = 'publish'";
-
-			/* Let's execute the SQL record and get the results */
-			$quotes_results = $wpdb->get_results( $quotes_query, ARRAY_A );
-			$tips_results   = $wpdb->get_results( $tips_query, ARRAY_A );
-
-			/* Initialize CSV data */
-			$csv_data = '"post_type";"post_title";"post_content";"name_field";"off_cap";' . PHP_EOL;
-
-			/* Add data for quotes */
-			foreach ( $quotes_results as $quote ) {
-				$csv_data .= '"' . implode( '";"', array( 'quote', strip_tags( $quote['post_title'] ), strip_tags( $quote['post_content'] ), $quote['name_field'], $quote['off_cap'] ) ) . '";' . PHP_EOL;
-			}
-
-			/* Add data for tips */
-			foreach ( $tips_results as $tip ) {
-				$csv_data .= '"' . implode( '";"', array( 'tips', strip_tags( $tip['post_title'] ), strip_tags( $tip['post_content'] ), '', '' ) ) . '";' . PHP_EOL;
-			}
-
-			/* Use WordPress Filesystem API to create a CSV file */
-			$upload_dir = wp_upload_dir();
-			$file_name = $upload_dir['path'] . '/quotes_and_tips.csv';
-
-			$result = $wp_filesystem->put_contents( $file_name, $csv_data, FS_CHMOD_FILE );
-			if ( ! $result ) {
-				unlink( $file_name );
-				return false;
-				exit;
-			}
-
-			/* We configure HTTP headers and output CSV */
-			header( 'Content-Type: text/csv' );
-			header( 'Content-Disposition: attachment; filename="quotes_and_tips.csv"' );
-			echo $wp_filesystem->get_contents( $file_name );
-			unlink( $file_name );
-			exit;
-		}
-	}
-}
-
-if ( ! function_exists( 'qtsndtps_csv_upload' ) ) {
-	/**
-	 * Upload CSV with tips and quotes
-	 */
-	function qtsndtps_csv_upload() {
-		global $wpdb;
-		if ( isset( $_POST['qtsndtps_import_submit'] ) && check_admin_referer( 'qtsndtps_import_action', 'qtsndtps_import_field' ) ) {
-			if ( isset( $_FILES['qtsndtps_csv_file'] ) && isset( $_FILES['qtsndtps_csv_file']['error'] ) && UPLOAD_ERR_OK === $_FILES['qtsndtps_csv_file']['error'] ) {
-				$csv_file = isset( $_FILES['qtsndtps_csv_file']['tmp_name'] ) ? $_FILES['qtsndtps_csv_file']['tmp_name'] : '';
-
-				/* Read CSV file */
-				$csv_data = file_get_contents( $csv_file );
-
-				/* Split CSV data into rows */
-				$rows     = explode( PHP_EOL, $csv_data );
-				$current_row = '';
-				foreach ( $rows as $row ) {
-					if ( ';' !== substr( $row, -1 ) ) {
-						$current_row .= $row;
-						continue;
-					} else {
-						$row = $current_row . $row;
-					}
-					$current_row = '';
-					$row_data = str_getcsv( $row, ';' );
-					if ( empty( $row_data[0] ) || 'post_type' === $row_data[0] ) {
-						continue;
-					}				
-
-					$post_type    = sanitize_text_field( $row_data[0] );
-					$post_title   = sanitize_text_field( $row_data[1] );
-					$post_content = sanitize_text_field( $row_data[2] );
-
-					$post_array = array(
-						'post_title'   => $post_title,
-						'post_content' => $post_content,
-						'post_type'    => $post_type,
-						'post_status'  => 'publish',
-					);
-
-					$wpdb->insert(
-						$wpdb->posts,
-						$post_array
-					);
-
-					$post_id = $wpdb->insert_id;
-
-					if ( 'quote' === $row_data[0] ) {
-						$name_field   = sanitize_text_field( $row_data[3] );
-						$off_cap      = sanitize_text_field( $row_data[4] );
-						if ( $post_id ) {
-							$wpdb->insert(
-								$wpdb->postmeta,
-								array(
-									'post_id'    => $post_id,
-									'meta_key'   => 'name_field',
-									'meta_value' => $name_field,
-								)
-							);
-							$wpdb->insert(
-								$wpdb->postmeta,
-								array(
-									'post_id'    => $post_id,
-									'meta_key'   => 'off_cap',
-									'meta_value' => $off_cap,
-								)
-							);
-						}
-					}
-				}
-				return true;
-			} else {
-				return false;
-			}
-		}
-	}
-}
-
 if ( ! function_exists( 'qtsndtps_get_video_background_html' ) ) {
 	/**
 	 * Display Quotes Block with video background
@@ -785,14 +642,23 @@ if ( ! function_exists( 'qtsndtps_get_quotes_html' ) ) {
 			setup_postdata( $quote );
 			$name_field = get_post_meta( $post->ID, 'name_field', true );
 			$off_cap    = get_post_meta( $post->ID, 'off_cap', true );
+			$title_link = get_post_meta( $post->ID, 'title_link', true );
 			$html .= '<div ' . $style_parent_block . ' class="' . esc_attr( $quotes_class ) .
 				( 0 < $count ? ' hidden ' : ' visible ' ) .
 				'" data-id="' . get_the_ID() . '">' . $video_html . '
-				<div class="testimonials_box" id="testimonials_' . get_the_ID() . '">
-					<h3>' .
-						( ( isset( $qtsndtps_options['title_post'] ) && '1' === $qtsndtps_options['title_post'] ) ? get_the_title() : $qtsndtps_options['quote_label'] ) .
-					'</h3>
-					<p>
+				<div class="testimonials_box" id="testimonials_' . get_the_ID() . '">';
+				if ( isset( $qtsndtps_options['title_post'] ) && '-1' !== $qtsndtps_options['title_post'] ) {
+					$html .= '<h3>';
+					if ( ! empty( $title_link ) ) {
+						$html .= '<a href="' . esc_url( $title_link ) . '" target="_blank">';
+					}
+					$html .= ( ( isset( $qtsndtps_options['title_post'] ) && '1' === $qtsndtps_options['title_post'] ) ? get_the_title() : $qtsndtps_options['quote_label'] );
+					if ( ! empty( $title_link ) ) {
+						$html .= '</a>';
+					}
+					$html .= '</h3>';
+				}
+				$html .= '<p>
 						' . ( ( $qtsndtps_options['remove_quatation'] ) ? '<i>' . get_the_content() . '</i>' : '<i>"' . get_the_content() . '"</i>' ) . '
 					</p>
 					<p class="signature">';
@@ -839,13 +705,22 @@ if ( ! function_exists( 'qtsndtps_get_tips_html' ) ) {
 		foreach ( $posts as $tip ) {
 			$post = $tip;
 			setup_postdata( $tip );
+			$title_link = get_post_meta( $post->ID, 'tip_title_link', true );
 			$html .= '<div ' . $style_parent_block . ' class="' . esc_attr( $tips_class ) .
 				( 0 < $count ? ' hidden ' : ' visible ' ) .
-				'" data-id="' . get_the_ID() . '">' . $video_html . '
-					<h3>' .
-					( ( isset( $qtsndtps_options['title_post'] ) && '1' === $qtsndtps_options['title_post'] ) ? get_the_title() : $qtsndtps_options['tip_label'] ) .
-				'</h3>
-					<p>' . get_the_content() . '</p>
+				'" data-id="' . get_the_ID() . '">' . $video_html . '';
+				if ( isset( $qtsndtps_options['title_post'] ) && '-1' !== $qtsndtps_options['title_post'] ) {
+					$html .= '<h3>';
+					if ( ! empty( $title_link ) ) {
+						$html .= '<a href="' . esc_url( $title_link ) . '" target="_blank">';
+					}
+					$html .= ( ( isset( $qtsndtps_options['title_post'] ) && '1' === $qtsndtps_options['title_post'] ) ? get_the_title() : $qtsndtps_options['tip_label'] );
+					if ( ! empty( $title_link ) ) {
+						$html .= '</a>';
+					}
+					$html .= '</h3>';
+				}
+				$html .= '<p>' . get_the_content() . '</p>
 					</div>';
 			$count ++;
 		}
@@ -862,20 +737,49 @@ if ( ! function_exists( 'qtsndtps_quote_custom_metabox' ) ) {
 	 * Display Metabox with quote
 	 */
 	function qtsndtps_quote_custom_metabox() {
-		global $post;
-		$name_field = get_post_meta( $post->ID, 'name_field' );
-		$off_cap    = get_post_meta( $post->ID, 'off_cap' );
+		global $post, $qtsndtps_options;
+		$name_field = get_post_meta( $post->ID, 'name_field', true );
+		$off_cap    = get_post_meta( $post->ID, 'off_cap', true );
+		$title_link = get_post_meta( $post->ID, 'title_link', true );
 		wp_nonce_field( plugin_basename( __FILE__ ), 'qtsndtps_nonce_name' ); ?>
 		<p><label for="name_field"><?php esc_html_e( 'Name:', 'quotes-and-tips' ); ?><br />
-				<input type="text" id="name_field" size="37" name="name_field" value="<?php echo ! empty( $name_field ) ? esc_html( $name_field[0] ) : ''; ?>" />
+				<input type="text" id="name_field" size="37" name="name_field" value="<?php echo ! empty( $name_field ) ? esc_html( $name_field ) : ''; ?>" />
 			</label>
 		</p>
 		<p><label for="off_cap"><?php esc_html_e( 'Official Position:', 'quotes-and-tips' ); ?><br />
-				<input type="text" id="off_cap" size="37" name="off_cap" value="<?php echo ! empty( $off_cap ) ? esc_html( $off_cap[0] ) : ''; ?>" />
+				<input type="text" id="off_cap" size="37" name="off_cap" value="<?php echo ! empty( $off_cap ) ? esc_html( $off_cap ) : ''; ?>" />
 			</label>
 		</p>
 		<p><span class="bws_info"><?php echo esc_html__( 'Please fill in these fields to make the export/import function work correctly.', 'quotes-and-tips' ); ?></span></p>
 		<?php
+		if ( '-1' !== $qtsndtps_options['title_post'] ) {
+			?>
+			<p><label for="off_cap"><?php esc_html_e( 'Link for Title:', 'quotes-and-tips' ); ?><br />
+					<input type="text" size="37" name="title_link" value="<?php echo ! empty( $title_link ) ? esc_html( $title_link ) : ''; ?>" />
+				</label>
+			</p>
+			<?php
+		}
+	}
+}
+
+if ( ! function_exists( 'qtsndtps_tips_custom_metabox' ) ) {
+	/**
+	 * Display Metabox with quote
+	 */
+	function qtsndtps_tips_custom_metabox() {
+		global $post, $qtsndtps_options;
+		$title_link = get_post_meta( $post->ID, 'tip_title_link', true );
+		wp_nonce_field( plugin_basename( __FILE__ ), 'qtsndtps_nonce_name' ); ?>
+		<?php
+		if ( '-1' !== $qtsndtps_options['title_post'] ) {
+			?>
+			<p><label for="off_cap"><?php esc_html_e( 'Link for Title:', 'quotes-and-tips' ); ?><br />
+					<input type="text" size="37" name="tip_title_link" value="<?php echo ! empty( $title_link ) ? esc_html( $title_link ) : ''; ?>" />
+				</label>
+			</p>
+			<?php
+		}
 	}
 }
 
@@ -884,7 +788,11 @@ if ( ! function_exists( 'qtsndtps_add_custom_metabox' ) ) {
 	 * Add Metabox with quote
 	 */
 	function qtsndtps_add_custom_metabox() {
+		global $qtsndtps_options;
 		add_meta_box( 'custom-metabox', __( 'Name and Official Position', 'quotes-and-tips' ), 'qtsndtps_quote_custom_metabox', 'quote', 'normal', 'high' );
+		if ( '-1' !== $qtsndtps_options['title_post'] ) {
+			add_meta_box( 'custom-metabox1', __( 'Title link', 'quotes-and-tips' ), 'qtsndtps_tips_custom_metabox', 'tips', 'normal', 'high' );
+		}
 	}
 }
 
@@ -1110,6 +1018,9 @@ if ( ! function_exists( 'qtsndtps_print_style_script' ) ) {
 					z-index: 2;
 					color: <?php echo esc_attr( $text_color ); ?> !important;
 				}
+				.quotes_box_and_tips a {
+					color: <?php echo esc_attr( $text_color ); ?> !important;
+				}
 				<?php if ( 'video' === $background_image ) { ?>
 					.quotes_box_and_tips video {
 						opacity: <?php echo esc_attr( $qtsndtps_options['background_opacity'] ); ?>;
@@ -1288,6 +1199,9 @@ if ( ! function_exists( 'qtsndtps_save_custom_quote' ) ) {
 		if ( ( ( isset( $_POST['name_field'] ) && '' !== $_POST['name_field'] ) || ( isset( $_POST['off_cap'] ) && '' !== $_POST['off_cap'] ) ) && check_admin_referer( plugin_basename( __FILE__ ), 'qtsndtps_nonce_name' ) ) {
 			update_post_meta( $post->ID, 'name_field', sanitize_text_field( wp_unslash( $_POST['name_field'] ) ) );
 			update_post_meta( $post->ID, 'off_cap', sanitize_text_field( wp_unslash( $_POST['off_cap'] ) ) );
+			update_post_meta( $post->ID, 'title_link', sanitize_url( wp_unslash( $_POST['title_link'] ) ) );
+		} elseif ( isset( $_POST['tip_title_link'] ) && check_admin_referer( plugin_basename( __FILE__ ), 'qtsndtps_nonce_name' ) ) {
+			update_post_meta( $post->ID, 'tip_title_link', sanitize_url( wp_unslash( $_POST['tip_title_link'] ) ) );
 		}
 	}
 }
